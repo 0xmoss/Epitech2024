@@ -1,0 +1,15 @@
+﻿@page
+@model CoffeeModel
+@{
+    CoffeeModel coffeeModel = new CoffeeModel();
+
+    ViewData["Title"] = "Coffee";
+
+    await coffeeModel.key(null);
+
+    await coffeeModel.start();
+    <h1>
+        @coffeeModel.settings.launch
+        @await coffeeModel.get_subscriptions();
+    </h1>
+}

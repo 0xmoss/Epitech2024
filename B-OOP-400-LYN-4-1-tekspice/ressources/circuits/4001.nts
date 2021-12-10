@@ -1,0 +1,29 @@
+.chipsets:
+input a
+input b
+input d
+input h
+input e
+input f
+input g
+input c
+
+output s
+output t
+output u
+output v
+4001 gate
+
+.links:
+a:1 gate:1
+
+s:1 gate:3
+
+t:1 gate:4
+
+u:1 gate:10
+
+v:1 gate:11
+
+g:1 gate:9
+h:1 gate:10

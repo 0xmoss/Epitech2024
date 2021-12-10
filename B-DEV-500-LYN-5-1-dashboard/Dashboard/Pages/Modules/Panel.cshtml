@@ -1,0 +1,89 @@
+﻿@page
+@model PanelModel
+@{
+    PanelModel panelModel = new PanelModel();
+    bool launched = true;
+
+    ViewData["Title"] = "Panel";
+
+    panelModel.generate();
+    //panelModel.run_clock();
+    
+    <script>
+        window.setInterval('refresh()', 30000); 	
+        function refresh() {
+            window .location.reload();
+        }
+    </script>
+
+    <p>
+        @foreach (Insult.Root item in panelModel.content.insults)
+        {
+            <h1 id="HTML_insult" runat="server">
+                @item.insult
+            </h1>
+        }
+        
+        @foreach (Quote.Root item in panelModel.content.quotes)
+        {
+            <h2 id="HTML_quote" runat="server">
+                @item.quote by @item.character
+            </h2>
+        }
+
+        @foreach (Number.Root item in panelModel.content.numbers)
+        {
+            <h2 id="HTML_quote" runat="server">
+                @item.number
+            </h2>
+            <h2 id="HTML_quote" runat="server">
+                @item.trivia
+            </h2>
+            <h2 id="HTML_quote" runat="server">
+                @item.date
+            </h2>
+            <h2 id="HTML_quote" runat="server">
+                @item.year
+            </h2>
+        }
+
+        @foreach (Meme.Root item in panelModel.content.memes)
+        {
+            <h2 id="HTML_quote" runat="server">
+                <img src="@item.url" width=50% height=50%>
+            </h2>
+        }
+
+        @foreach (Meow.Root item in panelModel.content.meows)
+        {
+            <h2 id="HTML_quote" runat="server">
+                @item.data[0]
+            </h2>
+        }
+
+        @foreach (Dog.Root item in panelModel.content.dogs)
+        {
+            <h2 id="HTML_quote" runat="server">
+                @if (item.url.EndsWith(".mp4") == true) {
+                   <video src="@item.url" width=50% height=50% controls></video>
+                } else {
+                    <img src="@item.url" width=50% height=50%>
+                }
+            </h2>
+        }
+
+        @foreach (Duck.Root item in panelModel.content.ducks)
+        {
+            <h2 id="HTML_quote" runat="server">
+                <img src="@item.url" width=50% height=50%>
+            </h2>
+        }
+
+        @foreach (Cat.Root item in panelModel.content.cats)
+        {
+            <h2 runat="server">
+                <img src="@item.url" width=50% height=50%>
+            </h2>
+        }
+    </p>
+}

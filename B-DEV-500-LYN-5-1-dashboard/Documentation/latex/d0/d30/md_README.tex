@@ -1,0 +1,320 @@
+\hypertarget{md_README_autotoc_md1}{}\doxysection{API}\label{md_README_autotoc_md1}
+{\bfseries{Request}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{GET ​/api​/Users}
+\DoxyCodeLine{Body: null}
+
+\end{DoxyCode}
+
+
+{\bfseries{Response}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[}
+\DoxyCodeLine{  \{}
+\DoxyCodeLine{    "{}id"{}: "{}string"{},}
+\DoxyCodeLine{    "{}userName"{}: "{}string"{},}
+\DoxyCodeLine{    "{}password"{}: "{}string"{},}
+\DoxyCodeLine{    "{}connected"{}: true}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{]}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+
+
+{\bfseries{Request}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{POST ​/api​/Users}
+\DoxyCodeLine{Body:}
+
+\end{DoxyCode}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  "{}id"{}: "{}string"{},}
+\DoxyCodeLine{  "{}userName"{}: "{}string"{},}
+\DoxyCodeLine{  "{}password"{}: "{}string"{},}
+\DoxyCodeLine{  "{}connected"{}: true}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Response}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[}
+\DoxyCodeLine{  \{}
+\DoxyCodeLine{    "{}id"{}: "{}string"{},}
+\DoxyCodeLine{    "{}userName"{}: "{}string"{},}
+\DoxyCodeLine{    "{}password"{}: "{}string"{},}
+\DoxyCodeLine{    "{}connected"{}: true}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{]}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+
+
+{\bfseries{Request}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{GET ​/api​/Users/\{id\}}
+\DoxyCodeLine{Body: null}
+
+\end{DoxyCode}
+
+
+{\bfseries{Response}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[}
+\DoxyCodeLine{  \{}
+\DoxyCodeLine{    "{}id"{}: "{}string"{},}
+\DoxyCodeLine{    "{}userName"{}: "{}string"{},}
+\DoxyCodeLine{    "{}password"{}: "{}string"{},}
+\DoxyCodeLine{    "{}connected"{}: true}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{]}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+
+
+{\bfseries{Request}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{PUT ​/api​/Users/\{id\}}
+\DoxyCodeLine{Body: null}
+
+\end{DoxyCode}
+
+
+{\bfseries{Response}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Status Code}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+
+
+{\bfseries{Request}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{DELETE ​/api​/Users/\{id\}}
+\DoxyCodeLine{Body: null}
+
+\end{DoxyCode}
+
+
+{\bfseries{Response}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Status Code}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md6}{}\doxysection{About.\+json}\label{md_README_autotoc_md6}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  "{}client"{}: \{}
+\DoxyCodeLine{    "{}host"{}: "{}0.0.0.0:8080"{}}
+\DoxyCodeLine{  \},}
+\DoxyCodeLine{  "{}server"{}: \{}
+\DoxyCodeLine{    "{}current\_time"{}: 1638273441,}
+\DoxyCodeLine{    "{}services "{}: [}
+\DoxyCodeLine{      \{}
+\DoxyCodeLine{        "{}name"{}: "{}spotify"{},}
+\DoxyCodeLine{        "{}widgets"{}: [}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}search\_artist"{},}
+\DoxyCodeLine{            "{}description"{}: "{}search for artist"{},}
+\DoxyCodeLine{            "{}params"{}: [}
+\DoxyCodeLine{              \{}
+\DoxyCodeLine{                "{}name"{}: "{}artist name"{},}
+\DoxyCodeLine{                "{}type"{}: "{}string"{}}
+\DoxyCodeLine{              \}}
+\DoxyCodeLine{            ]}
+\DoxyCodeLine{          \},}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}search\_track"{},}
+\DoxyCodeLine{            "{}description"{}: "{}search for track"{},}
+\DoxyCodeLine{            "{}params"{}: [}
+\DoxyCodeLine{              \{}
+\DoxyCodeLine{                "{}name"{}: "{}track name"{},}
+\DoxyCodeLine{                "{}type"{}: "{}string"{}}
+\DoxyCodeLine{              \}}
+\DoxyCodeLine{            ]}
+\DoxyCodeLine{          \},}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}search\_top\_track"{},}
+\DoxyCodeLine{            "{}description"{}: "{}search for top track"{},}
+\DoxyCodeLine{            "{}params"{}: [}
+\DoxyCodeLine{              \{}
+\DoxyCodeLine{                "{}name"{}: "{}artist name"{},}
+\DoxyCodeLine{                "{}type"{}: "{}string"{}}
+\DoxyCodeLine{              \}}
+\DoxyCodeLine{            ]}
+\DoxyCodeLine{          \},}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}search\_album"{},}
+\DoxyCodeLine{            "{}description"{}: "{}search for artist albums"{},}
+\DoxyCodeLine{            "{}params"{}: [}
+\DoxyCodeLine{              \{}
+\DoxyCodeLine{                "{}name"{}: "{}artist name"{},}
+\DoxyCodeLine{                "{}type"{}: "{}string"{}}
+\DoxyCodeLine{              \}}
+\DoxyCodeLine{            ]}
+\DoxyCodeLine{          \},}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}get\_playlists"{},}
+\DoxyCodeLine{            "{}description"{}: "{}get your own playlists"{},}
+\DoxyCodeLine{            "{}params"{}: null}
+\DoxyCodeLine{          \},}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}follow\_playlist"{},}
+\DoxyCodeLine{            "{}description"{}: "{}follow a specific playlist"{},}
+\DoxyCodeLine{            "{}params"{}: [}
+\DoxyCodeLine{              \{}
+\DoxyCodeLine{                "{}name"{}: "{}playlist id"{},}
+\DoxyCodeLine{                "{}type"{}: "{}string"{}}
+\DoxyCodeLine{              \}}
+\DoxyCodeLine{            ]}
+\DoxyCodeLine{          \},}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}unfollow\_playlist"{},}
+\DoxyCodeLine{            "{}description"{}: "{}unfollow a specific playlist"{},}
+\DoxyCodeLine{            "{}params"{}: [}
+\DoxyCodeLine{              \{}
+\DoxyCodeLine{                "{}name"{}: "{}playlist id"{},}
+\DoxyCodeLine{                "{}type"{}: "{}string"{}}
+\DoxyCodeLine{              \}}
+\DoxyCodeLine{            ]}
+\DoxyCodeLine{          \}}
+\DoxyCodeLine{        ]}
+\DoxyCodeLine{      \},}
+\DoxyCodeLine{      \{}
+\DoxyCodeLine{        "{}name"{}: "{}quote"{},}
+\DoxyCodeLine{        "{}widgets"{}: [}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}get\_random"{},}
+\DoxyCodeLine{            "{}description"{}: "{}get a random anime quote"{},}
+\DoxyCodeLine{            "{}params"{}: null}
+\DoxyCodeLine{          \}}
+\DoxyCodeLine{        ]}
+\DoxyCodeLine{      \},}
+\DoxyCodeLine{      \{}
+\DoxyCodeLine{        "{}name"{}: "{}meme"{},}
+\DoxyCodeLine{        "{}widgets"{}: [}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}get\_random"{},}
+\DoxyCodeLine{            "{}description"{}: "{}get a random meme"{},}
+\DoxyCodeLine{            "{}params"{}: null}
+\DoxyCodeLine{          \}}
+\DoxyCodeLine{        ]}
+\DoxyCodeLine{      \},}
+\DoxyCodeLine{      \{}
+\DoxyCodeLine{        "{}name"{}: "{}duck"{},}
+\DoxyCodeLine{        "{}widgets"{}: [}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}get\_random"{},}
+\DoxyCodeLine{            "{}description"{}: "{}get a random duck"{},}
+\DoxyCodeLine{            "{}params"{}: null}
+\DoxyCodeLine{          \}}
+\DoxyCodeLine{        ]}
+\DoxyCodeLine{      \},}
+\DoxyCodeLine{      \{}
+\DoxyCodeLine{        "{}name"{}: "{}dog"{},}
+\DoxyCodeLine{        "{}widgets"{}: [}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}get\_random"{},}
+\DoxyCodeLine{            "{}description"{}: "{}get a random dog"{},}
+\DoxyCodeLine{            "{}params"{}: null}
+\DoxyCodeLine{          \}}
+\DoxyCodeLine{        ]}
+\DoxyCodeLine{      \},}
+\DoxyCodeLine{      \{}
+\DoxyCodeLine{        "{}name"{}: "{}insult"{},}
+\DoxyCodeLine{        "{}widgets"{}: [}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}get\_random"{},}
+\DoxyCodeLine{            "{}description"{}: "{}get a random insult for free (and fun)"{},}
+\DoxyCodeLine{            "{}params"{}: null}
+\DoxyCodeLine{          \}}
+\DoxyCodeLine{        ]}
+\DoxyCodeLine{      \},}
+\DoxyCodeLine{      \{}
+\DoxyCodeLine{        "{}name"{}: "{}coffee"{},}
+\DoxyCodeLine{        "{}widgets"{}: [}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}subscribers"{},}
+\DoxyCodeLine{            "{}description"{}: "{}get all your subscribers"{},}
+\DoxyCodeLine{            "{}params"{}: null}
+\DoxyCodeLine{          \},}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}supporters"{},}
+\DoxyCodeLine{            "{}description"{}: "{}get all your supporters"{},}
+\DoxyCodeLine{            "{}params"{}: null}
+\DoxyCodeLine{          \},}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}extras"{},}
+\DoxyCodeLine{            "{}description"{}: "{}get all your extras"{},}
+\DoxyCodeLine{            "{}params"{}: null}
+\DoxyCodeLine{          \}}
+\DoxyCodeLine{        ]}
+\DoxyCodeLine{      \},}
+\DoxyCodeLine{      \{}
+\DoxyCodeLine{        "{}name"{}: "{}weather"{},}
+\DoxyCodeLine{        "{}widgets"{}: [}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}temperature"{},}
+\DoxyCodeLine{            "{}description"{}: "{}get current city temperature"{},}
+\DoxyCodeLine{            "{}params"{}: null}
+\DoxyCodeLine{          \},}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}wind\_speed"{},}
+\DoxyCodeLine{            "{}description"{}: "{}get current city windspeed"{},}
+\DoxyCodeLine{            "{}params"{}: null}
+\DoxyCodeLine{          \},}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}humidity"{},}
+\DoxyCodeLine{            "{}description"{}: "{}get current city humidity"{},}
+\DoxyCodeLine{            "{}params"{}: null}
+\DoxyCodeLine{          \},}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}name"{},}
+\DoxyCodeLine{            "{}description"{}: "{}get current city name"{},}
+\DoxyCodeLine{            "{}params"{}: null}
+\DoxyCodeLine{          \},}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}country"{},}
+\DoxyCodeLine{            "{}description"{}: "{}get current city country"{},}
+\DoxyCodeLine{            "{}params"{}: null}
+\DoxyCodeLine{          \},}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}region"{},}
+\DoxyCodeLine{            "{}description"{}: "{}get current city region"{},}
+\DoxyCodeLine{            "{}params"{}: null}
+\DoxyCodeLine{          \},}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}latitude"{},}
+\DoxyCodeLine{            "{}description"{}: "{}get current city latitude"{},}
+\DoxyCodeLine{            "{}params"{}: null}
+\DoxyCodeLine{          \},}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            "{}name"{}: "{}longitude"{},}
+\DoxyCodeLine{            "{}description"{}: "{}get current city longitude"{},}
+\DoxyCodeLine{            "{}params"{}: null}
+\DoxyCodeLine{          \}}
+\DoxyCodeLine{        ]}
+\DoxyCodeLine{      \}}
+\DoxyCodeLine{    ]}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+TODO\+: ABOUT.\+JSON MOVABLE WIDGETS 

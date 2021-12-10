@@ -1,0 +1,298 @@
+# Dashboard
+
+## API
+
+**Request**
+```
+GET ​/api​/Users
+Body: null
+```
+
+**Response**
+```JSON
+[
+  {
+    "id": "string",
+    "userName": "string",
+    "password": "string",
+    "connected": true
+  }
+]
+```
+
+---
+
+**Request**
+```
+POST ​/api​/Users
+Body:
+```
+```JSON
+{
+  "id": "string",
+  "userName": "string",
+  "password": "string",
+  "connected": true
+}
+```
+
+**Response**
+```JSON
+[
+  {
+    "id": "string",
+    "userName": "string",
+    "password": "string",
+    "connected": true
+  }
+]
+```
+
+---
+
+**Request**
+```
+GET ​/api​/Users/{id}
+Body: null
+```
+
+**Response**
+```JSON
+[
+  {
+    "id": "string",
+    "userName": "string",
+    "password": "string",
+    "connected": true
+  }
+]
+```
+
+---
+
+**Request**
+```
+PUT ​/api​/Users/{id}
+Body: null
+```
+
+**Response**
+```
+Status Code
+```
+
+---
+
+**Request**
+```
+DELETE ​/api​/Users/{id}
+Body: null
+```
+
+**Response**
+```
+Status Code
+```
+
+## About.json
+```JSON
+{
+  "client": {
+    "host": "0.0.0.0:8080"
+  },
+  "server": {
+    "current_time": 1638273441,
+    "services ": [
+      {
+        "name": "spotify",
+        "widgets": [
+          {
+            "name": "search_artist",
+            "description": "search for artist",
+            "params": [
+              {
+                "name": "artist name",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "name": "search_track",
+            "description": "search for track",
+            "params": [
+              {
+                "name": "track name",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "name": "search_top_track",
+            "description": "search for top track",
+            "params": [
+              {
+                "name": "artist name",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "name": "search_album",
+            "description": "search for artist albums",
+            "params": [
+              {
+                "name": "artist name",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "name": "get_playlists",
+            "description": "get your own playlists",
+            "params": null
+          },
+          {
+            "name": "follow_playlist",
+            "description": "follow a specific playlist",
+            "params": [
+              {
+                "name": "playlist id",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "name": "unfollow_playlist",
+            "description": "unfollow a specific playlist",
+            "params": [
+              {
+                "name": "playlist id",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "quote",
+        "widgets": [
+          {
+            "name": "get_random",
+            "description": "get a random anime quote",
+            "params": null
+          }
+        ]
+      },
+      {
+        "name": "meme",
+        "widgets": [
+          {
+            "name": "get_random",
+            "description": "get a random meme",
+            "params": null
+          }
+        ]
+      },
+      {
+        "name": "duck",
+        "widgets": [
+          {
+            "name": "get_random",
+            "description": "get a random duck",
+            "params": null
+          }
+        ]
+      },
+      {
+        "name": "dog",
+        "widgets": [
+          {
+            "name": "get_random",
+            "description": "get a random dog",
+            "params": null
+          }
+        ]
+      },
+      {
+        "name": "insult",
+        "widgets": [
+          {
+            "name": "get_random",
+            "description": "get a random insult for free (and fun)",
+            "params": null
+          }
+        ]
+      },
+      {
+        "name": "coffee",
+        "widgets": [
+          {
+            "name": "subscribers",
+            "description": "get all your subscribers",
+            "params": null
+          },
+          {
+            "name": "supporters",
+            "description": "get all your supporters",
+            "params": null
+          },
+          {
+            "name": "extras",
+            "description": "get all your extras",
+            "params": null
+          }
+        ]
+      },
+      {
+        "name": "weather",
+        "widgets": [
+          {
+            "name": "temperature",
+            "description": "get current city temperature",
+            "params": null
+          },
+          {
+            "name": "wind_speed",
+            "description": "get current city windspeed",
+            "params": null
+          },
+          {
+            "name": "humidity",
+            "description": "get current city humidity",
+            "params": null
+          },
+          {
+            "name": "name",
+            "description": "get current city name",
+            "params": null
+          },
+          {
+            "name": "country",
+            "description": "get current city country",
+            "params": null
+          },
+          {
+            "name": "region",
+            "description": "get current city region",
+            "params": null
+          },
+          {
+            "name": "latitude",
+            "description": "get current city latitude",
+            "params": null
+          },
+          {
+            "name": "longitude",
+            "description": "get current city longitude",
+            "params": null
+          }
+        ]
+      }
+    ]
+  }
+};
+```
+
+TODO:
+  ABOUT.JSON
+  MOVABLE WIDGETS

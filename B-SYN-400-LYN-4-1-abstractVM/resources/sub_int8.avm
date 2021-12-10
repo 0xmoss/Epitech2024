@@ -1,0 +1,12 @@
+; ---------------
+; - example.avm -
+; ---------------
+
+push int8(3)
+push int8(126)
+dump
+sub
+dump
+clear
+push int16(35000)
+exit

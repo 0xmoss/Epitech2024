@@ -1,0 +1,329 @@
+\hypertarget{classDashboard_1_1Pages_1_1SpotifyModel}{}\doxysection{Dashboard.\+Pages.\+Spotify\+Model Class Reference}
+\label{classDashboard_1_1Pages_1_1SpotifyModel}\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+Inheritance diagram for Dashboard.\+Pages.\+Spotify\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d8/d8c/classDashboard_1_1Pages_1_1SpotifyModel}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_1_1Settings}{Settings}}
+\item 
+class \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_1_1SUser}{SUser}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async Task$<$ Task $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_af926140bf86ca14072fee2a30b8cf585}{me}} (string token)
+\item 
+async Task$<$ Dictionary$<$ string, string $>$ $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a80e9dd1e2092e56035474136a887a46e}{user\+\_\+informations}} ()
+\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a43c3f58d3ab37a9c15816265021d92ab}{call\+\_\+login}} ()
+\item 
+async Task$<$ bool $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_aa79363066126903d10dc189054bba308}{is\+\_\+logged}} ()
+\item 
+async Task \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a2c8ae1ca07e6e325fabaa9349aefc781}{logout}} ()
+\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a728ec3cf29c5a28a491e06efa37311e2}{fetch\+\_\+token}} (string token)
+\item 
+async Task$<$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyTrack_1_1Root}{Spotify\+Track.\+Root}} $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a8dea9a0feabb610478c20bff3e8da9fc}{search\+\_\+track}} (string data)
+\item 
+async Task$<$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyArtist_1_1Root}{Spotify\+Artist.\+Root}} $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_aeebaaaffb4821fe11644bace57136510}{search\+\_\+artist}} (string data)
+\item 
+async Task$<$ Paging$<$ Simple\+Album $>$ $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a508924b1a4bcbdc9b14e1e81f5d8c5c1}{search\+\_\+album}} (string artist)
+\item 
+async Task$<$ List$<$ Full\+Track $>$ $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a2ff31ae6783a1800e96b480a37b6fd71}{search\+\_\+top}} (string artist)
+\item 
+async Task$<$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyPlaylist_1_1Root}{Spotify\+Playlist.\+Root}} $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_adbc0b081bda390d57e5444959cc184ea}{search\+\_\+playlist}} ()
+\item 
+async Task$<$ Paging$<$ Simple\+Album $>$ $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a272f396da6c488259c71e281e1b1fbcf}{get\+\_\+albums}} (string id)
+\item 
+async Task$<$ Artists\+Top\+Tracks\+Response $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_ad2e2edfa77c0568f9fea8288d84dfdb3}{get\+\_\+top}} (string id)
+\item 
+async Task$<$ Task $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_ae6e35b27bd7030bc79f9fb85011052c2}{follow}} (string playlistid)
+\item 
+async Task$<$ Task $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a38f5738890f6136a27df44f1fd822373}{unfollow}} (string playlistid)
+\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a63f6b382d43a15820d4884f6f4dea094}{get\+\_\+user\+\_\+name}} ()
+\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_acd008061c2c0bc8aa30b471b66f68bd0}{get\+\_\+user\+\_\+id}} ()
+\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a330dc61f0c4f41063c5ca592e93b729a}{get\+\_\+user\+\_\+email}} ()
+\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a436ea128e852eae861c6e04fe0ad2f5f}{get\+\_\+user\+\_\+followers}} ()
+\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a18b31a1ca359d08f0302db303e1d5927}{get\+\_\+user\+\_\+token}} ()
+\item 
+async Task$<$ List$<$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyUser_1_1Image}{Spotify\+User.\+Image}} $>$ $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a39e3c73178a2cd70dd9fd0a596de6c3c}{get\+\_\+user\+\_\+image}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a9e6dd6b91987f345749a4b49b46254f8}{login\+\_\+url}} = null
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_ac603cfb2d4e0bbdf9a85188442d18f86}{load\+\_\+cache}} ()
+\item 
+async Task$<$ Task $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a76ab4dcefcb1f72866ab65ecea34f62f}{create\+\_\+client}} (string token)
+\item 
+async Task$<$ Task $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a6fe538b560f13d2b9f3adb93483fbd0d}{login\+\_\+user}} ()
+\item 
+async Task$<$ Task $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_aae25597275ced1404a62cfa39c8bec12}{login}} ()
+\item 
+bool \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_ac487c014cc7cca45d5368c75a307604c}{compare}} (string a, string b)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_1_1Settings}{Settings}} \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a0b01a389cf8fb4cee3dbdd7a794e2394}{settings}} = new \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_1_1Settings}{Settings}}()
+\item 
+\mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_1_1SUser}{SUser}} \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_ab53558ca2c34b8e8a88e2412655285d9}{user}} = new \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_1_1SUser}{SUser}}()
+\item 
+\mbox{\hyperlink{classDashboard_1_1Pages_1_1Requests}{Requests}} \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a6c66238c3697585345c98971293c9e30}{requests}} = new \mbox{\hyperlink{classDashboard_1_1Pages_1_1Requests}{Requests}}(\mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a497ba955664fa50dc327cb5f1dd5c4b6}{authentification}})
+\item 
+\mbox{\hyperlink{classDashboard_1_1Pages_1_1Password}{Password}} \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_aa39fa0a74d9d4cb1ff4c3b8dddabe8ac}{password}} = new \mbox{\hyperlink{classDashboard_1_1Pages_1_1Password}{Password}}()
+\item 
+\mbox{\hyperlink{classDashboard_1_1Pages_1_1Html}{Html}} \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a047cb04bbf51d696baaaf0e07587578b}{html}} = new \mbox{\hyperlink{classDashboard_1_1Pages_1_1Html}{Html}}()
+\item 
+\mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyToken_1_1Root}{Spotify\+Token.\+Root}} \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a83c4f44607a683cd429ff1d3e0e1d8f6}{spotify\+\_\+token}} = new \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyToken_1_1Root}{Spotify\+Token.\+Root}}()
+\item 
+\mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyUser_1_1Root}{Spotify\+User.\+Root}} \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a867410a66b61df1f0150751b4312b4cd}{spotify\+\_\+user}} = new \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyUser_1_1Root}{Spotify\+User.\+Root}}()
+\item 
+Spotify\+Client \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_ace7513025bbdd30e2e5333034b9e10a9}{client}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classDashboard_1_1Pages_1_1Authentification}{Authentification}} \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a497ba955664fa50dc327cb5f1dd5c4b6}{authentification}} = new \mbox{\hyperlink{classDashboard_1_1Pages_1_1Authentification}{Authentification}}(\char`\"{}spotify\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a43c3f58d3ab37a9c15816265021d92ab}\label{classDashboard_1_1Pages_1_1SpotifyModel_a43c3f58d3ab37a9c15816265021d92ab}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!call\_login@{call\_login}}
+\index{call\_login@{call\_login}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{call\_login()}{call\_login()}}
+{\footnotesize\ttfamily async Task$<$ string $>$ Dashboard.\+Pages.\+Spotify\+Model.\+call\+\_\+login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_ac487c014cc7cca45d5368c75a307604c}\label{classDashboard_1_1Pages_1_1SpotifyModel_ac487c014cc7cca45d5368c75a307604c}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!compare@{compare}}
+\index{compare@{compare}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily bool Dashboard.\+Pages.\+Spotify\+Model.\+compare (\begin{DoxyParamCaption}\item[{string}]{a,  }\item[{string}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a76ab4dcefcb1f72866ab65ecea34f62f}\label{classDashboard_1_1Pages_1_1SpotifyModel_a76ab4dcefcb1f72866ab65ecea34f62f}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!create\_client@{create\_client}}
+\index{create\_client@{create\_client}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{create\_client()}{create\_client()}}
+{\footnotesize\ttfamily async Task$<$ Task $>$ Dashboard.\+Pages.\+Spotify\+Model.\+create\+\_\+client (\begin{DoxyParamCaption}\item[{string}]{token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a728ec3cf29c5a28a491e06efa37311e2}\label{classDashboard_1_1Pages_1_1SpotifyModel_a728ec3cf29c5a28a491e06efa37311e2}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!fetch\_token@{fetch\_token}}
+\index{fetch\_token@{fetch\_token}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{fetch\_token()}{fetch\_token()}}
+{\footnotesize\ttfamily async Task$<$ string $>$ Dashboard.\+Pages.\+Spotify\+Model.\+fetch\+\_\+token (\begin{DoxyParamCaption}\item[{string}]{token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_ae6e35b27bd7030bc79f9fb85011052c2}\label{classDashboard_1_1Pages_1_1SpotifyModel_ae6e35b27bd7030bc79f9fb85011052c2}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!follow@{follow}}
+\index{follow@{follow}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{follow()}{follow()}}
+{\footnotesize\ttfamily async Task$<$ Task $>$ Dashboard.\+Pages.\+Spotify\+Model.\+follow (\begin{DoxyParamCaption}\item[{string}]{playlistid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a272f396da6c488259c71e281e1b1fbcf}\label{classDashboard_1_1Pages_1_1SpotifyModel_a272f396da6c488259c71e281e1b1fbcf}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!get\_albums@{get\_albums}}
+\index{get\_albums@{get\_albums}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{get\_albums()}{get\_albums()}}
+{\footnotesize\ttfamily async Task$<$ Paging$<$ Simple\+Album $>$ $>$ Dashboard.\+Pages.\+Spotify\+Model.\+get\+\_\+albums (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_ad2e2edfa77c0568f9fea8288d84dfdb3}\label{classDashboard_1_1Pages_1_1SpotifyModel_ad2e2edfa77c0568f9fea8288d84dfdb3}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!get\_top@{get\_top}}
+\index{get\_top@{get\_top}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{get\_top()}{get\_top()}}
+{\footnotesize\ttfamily async Task$<$ Artists\+Top\+Tracks\+Response $>$ Dashboard.\+Pages.\+Spotify\+Model.\+get\+\_\+top (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a330dc61f0c4f41063c5ca592e93b729a}\label{classDashboard_1_1Pages_1_1SpotifyModel_a330dc61f0c4f41063c5ca592e93b729a}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!get\_user\_email@{get\_user\_email}}
+\index{get\_user\_email@{get\_user\_email}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{get\_user\_email()}{get\_user\_email()}}
+{\footnotesize\ttfamily async Task$<$ string $>$ Dashboard.\+Pages.\+Spotify\+Model.\+get\+\_\+user\+\_\+email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a436ea128e852eae861c6e04fe0ad2f5f}\label{classDashboard_1_1Pages_1_1SpotifyModel_a436ea128e852eae861c6e04fe0ad2f5f}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!get\_user\_followers@{get\_user\_followers}}
+\index{get\_user\_followers@{get\_user\_followers}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{get\_user\_followers()}{get\_user\_followers()}}
+{\footnotesize\ttfamily async Task$<$ string $>$ Dashboard.\+Pages.\+Spotify\+Model.\+get\+\_\+user\+\_\+followers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_acd008061c2c0bc8aa30b471b66f68bd0}\label{classDashboard_1_1Pages_1_1SpotifyModel_acd008061c2c0bc8aa30b471b66f68bd0}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!get\_user\_id@{get\_user\_id}}
+\index{get\_user\_id@{get\_user\_id}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{get\_user\_id()}{get\_user\_id()}}
+{\footnotesize\ttfamily async Task$<$ string $>$ Dashboard.\+Pages.\+Spotify\+Model.\+get\+\_\+user\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a39e3c73178a2cd70dd9fd0a596de6c3c}\label{classDashboard_1_1Pages_1_1SpotifyModel_a39e3c73178a2cd70dd9fd0a596de6c3c}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!get\_user\_image@{get\_user\_image}}
+\index{get\_user\_image@{get\_user\_image}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{get\_user\_image()}{get\_user\_image()}}
+{\footnotesize\ttfamily async Task$<$ List$<$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyUser_1_1Image}{Spotify\+User.\+Image}} $>$ $>$ Dashboard.\+Pages.\+Spotify\+Model.\+get\+\_\+user\+\_\+image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a63f6b382d43a15820d4884f6f4dea094}\label{classDashboard_1_1Pages_1_1SpotifyModel_a63f6b382d43a15820d4884f6f4dea094}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!get\_user\_name@{get\_user\_name}}
+\index{get\_user\_name@{get\_user\_name}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{get\_user\_name()}{get\_user\_name()}}
+{\footnotesize\ttfamily async Task$<$ string $>$ Dashboard.\+Pages.\+Spotify\+Model.\+get\+\_\+user\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a18b31a1ca359d08f0302db303e1d5927}\label{classDashboard_1_1Pages_1_1SpotifyModel_a18b31a1ca359d08f0302db303e1d5927}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!get\_user\_token@{get\_user\_token}}
+\index{get\_user\_token@{get\_user\_token}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{get\_user\_token()}{get\_user\_token()}}
+{\footnotesize\ttfamily async Task$<$ string $>$ Dashboard.\+Pages.\+Spotify\+Model.\+get\+\_\+user\+\_\+token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_aa79363066126903d10dc189054bba308}\label{classDashboard_1_1Pages_1_1SpotifyModel_aa79363066126903d10dc189054bba308}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!is\_logged@{is\_logged}}
+\index{is\_logged@{is\_logged}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{is\_logged()}{is\_logged()}}
+{\footnotesize\ttfamily async Task$<$ bool $>$ Dashboard.\+Pages.\+Spotify\+Model.\+is\+\_\+logged (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_ac603cfb2d4e0bbdf9a85188442d18f86}\label{classDashboard_1_1Pages_1_1SpotifyModel_ac603cfb2d4e0bbdf9a85188442d18f86}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!load\_cache@{load\_cache}}
+\index{load\_cache@{load\_cache}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{load\_cache()}{load\_cache()}}
+{\footnotesize\ttfamily Task Dashboard.\+Pages.\+Spotify\+Model.\+load\+\_\+cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_aae25597275ced1404a62cfa39c8bec12}\label{classDashboard_1_1Pages_1_1SpotifyModel_aae25597275ced1404a62cfa39c8bec12}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!login@{login}}
+\index{login@{login}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily async Task$<$ Task $>$ Dashboard.\+Pages.\+Spotify\+Model.\+login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a6fe538b560f13d2b9f3adb93483fbd0d}\label{classDashboard_1_1Pages_1_1SpotifyModel_a6fe538b560f13d2b9f3adb93483fbd0d}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!login\_user@{login\_user}}
+\index{login\_user@{login\_user}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{login\_user()}{login\_user()}}
+{\footnotesize\ttfamily async Task$<$ Task $>$ Dashboard.\+Pages.\+Spotify\+Model.\+login\+\_\+user (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a2c8ae1ca07e6e325fabaa9349aefc781}\label{classDashboard_1_1Pages_1_1SpotifyModel_a2c8ae1ca07e6e325fabaa9349aefc781}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!logout@{logout}}
+\index{logout@{logout}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{logout()}{logout()}}
+{\footnotesize\ttfamily async Task Dashboard.\+Pages.\+Spotify\+Model.\+logout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_af926140bf86ca14072fee2a30b8cf585}\label{classDashboard_1_1Pages_1_1SpotifyModel_af926140bf86ca14072fee2a30b8cf585}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!me@{me}}
+\index{me@{me}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{me()}{me()}}
+{\footnotesize\ttfamily async Task$<$ Task $>$ Dashboard.\+Pages.\+Spotify\+Model.\+me (\begin{DoxyParamCaption}\item[{string}]{token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a508924b1a4bcbdc9b14e1e81f5d8c5c1}\label{classDashboard_1_1Pages_1_1SpotifyModel_a508924b1a4bcbdc9b14e1e81f5d8c5c1}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!search\_album@{search\_album}}
+\index{search\_album@{search\_album}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{search\_album()}{search\_album()}}
+{\footnotesize\ttfamily async Task$<$ Paging$<$ Simple\+Album $>$ $>$ Dashboard.\+Pages.\+Spotify\+Model.\+search\+\_\+album (\begin{DoxyParamCaption}\item[{string}]{artist }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_aeebaaaffb4821fe11644bace57136510}\label{classDashboard_1_1Pages_1_1SpotifyModel_aeebaaaffb4821fe11644bace57136510}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!search\_artist@{search\_artist}}
+\index{search\_artist@{search\_artist}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{search\_artist()}{search\_artist()}}
+{\footnotesize\ttfamily async Task$<$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyArtist_1_1Root}{Spotify\+Artist.\+Root}} $>$ Dashboard.\+Pages.\+Spotify\+Model.\+search\+\_\+artist (\begin{DoxyParamCaption}\item[{string}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_adbc0b081bda390d57e5444959cc184ea}\label{classDashboard_1_1Pages_1_1SpotifyModel_adbc0b081bda390d57e5444959cc184ea}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!search\_playlist@{search\_playlist}}
+\index{search\_playlist@{search\_playlist}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{search\_playlist()}{search\_playlist()}}
+{\footnotesize\ttfamily async Task$<$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyPlaylist_1_1Root}{Spotify\+Playlist.\+Root}} $>$ Dashboard.\+Pages.\+Spotify\+Model.\+search\+\_\+playlist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a2ff31ae6783a1800e96b480a37b6fd71}\label{classDashboard_1_1Pages_1_1SpotifyModel_a2ff31ae6783a1800e96b480a37b6fd71}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!search\_top@{search\_top}}
+\index{search\_top@{search\_top}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{search\_top()}{search\_top()}}
+{\footnotesize\ttfamily async Task$<$ List$<$ Full\+Track $>$ $>$ Dashboard.\+Pages.\+Spotify\+Model.\+search\+\_\+top (\begin{DoxyParamCaption}\item[{string}]{artist }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a8dea9a0feabb610478c20bff3e8da9fc}\label{classDashboard_1_1Pages_1_1SpotifyModel_a8dea9a0feabb610478c20bff3e8da9fc}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!search\_track@{search\_track}}
+\index{search\_track@{search\_track}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{search\_track()}{search\_track()}}
+{\footnotesize\ttfamily async Task$<$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyTrack_1_1Root}{Spotify\+Track.\+Root}} $>$ Dashboard.\+Pages.\+Spotify\+Model.\+search\+\_\+track (\begin{DoxyParamCaption}\item[{string}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a38f5738890f6136a27df44f1fd822373}\label{classDashboard_1_1Pages_1_1SpotifyModel_a38f5738890f6136a27df44f1fd822373}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!unfollow@{unfollow}}
+\index{unfollow@{unfollow}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{unfollow()}{unfollow()}}
+{\footnotesize\ttfamily async Task$<$ Task $>$ Dashboard.\+Pages.\+Spotify\+Model.\+unfollow (\begin{DoxyParamCaption}\item[{string}]{playlistid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a80e9dd1e2092e56035474136a887a46e}\label{classDashboard_1_1Pages_1_1SpotifyModel_a80e9dd1e2092e56035474136a887a46e}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!user\_informations@{user\_informations}}
+\index{user\_informations@{user\_informations}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{user\_informations()}{user\_informations()}}
+{\footnotesize\ttfamily async Task$<$ Dictionary$<$ string, string $>$ $>$ Dashboard.\+Pages.\+Spotify\+Model.\+user\+\_\+informations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a497ba955664fa50dc327cb5f1dd5c4b6}\label{classDashboard_1_1Pages_1_1SpotifyModel_a497ba955664fa50dc327cb5f1dd5c4b6}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!authentification@{authentification}}
+\index{authentification@{authentification}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{authentification}{authentification}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDashboard_1_1Pages_1_1Authentification}{Authentification}} Dashboard.\+Pages.\+Spotify\+Model.\+authentification = new \mbox{\hyperlink{classDashboard_1_1Pages_1_1Authentification}{Authentification}}(\char`\"{}spotify\char`\"{})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_ace7513025bbdd30e2e5333034b9e10a9}\label{classDashboard_1_1Pages_1_1SpotifyModel_ace7513025bbdd30e2e5333034b9e10a9}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!client@{client}}
+\index{client@{client}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{client}{client}}
+{\footnotesize\ttfamily Spotify\+Client Dashboard.\+Pages.\+Spotify\+Model.\+client\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a047cb04bbf51d696baaaf0e07587578b}\label{classDashboard_1_1Pages_1_1SpotifyModel_a047cb04bbf51d696baaaf0e07587578b}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!html@{html}}
+\index{html@{html}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{html}{html}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDashboard_1_1Pages_1_1Html}{Html}} Dashboard.\+Pages.\+Spotify\+Model.\+html = new \mbox{\hyperlink{classDashboard_1_1Pages_1_1Html}{Html}}()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a9e6dd6b91987f345749a4b49b46254f8}\label{classDashboard_1_1Pages_1_1SpotifyModel_a9e6dd6b91987f345749a4b49b46254f8}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!login\_url@{login\_url}}
+\index{login\_url@{login\_url}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{login\_url}{login\_url}}
+{\footnotesize\ttfamily string Dashboard.\+Pages.\+Spotify\+Model.\+login\+\_\+url = null}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_aa39fa0a74d9d4cb1ff4c3b8dddabe8ac}\label{classDashboard_1_1Pages_1_1SpotifyModel_aa39fa0a74d9d4cb1ff4c3b8dddabe8ac}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!password@{password}}
+\index{password@{password}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDashboard_1_1Pages_1_1Password}{Password}} Dashboard.\+Pages.\+Spotify\+Model.\+password = new \mbox{\hyperlink{classDashboard_1_1Pages_1_1Password}{Password}}()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a6c66238c3697585345c98971293c9e30}\label{classDashboard_1_1Pages_1_1SpotifyModel_a6c66238c3697585345c98971293c9e30}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!requests@{requests}}
+\index{requests@{requests}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{requests}{requests}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDashboard_1_1Pages_1_1Requests}{Requests}} Dashboard.\+Pages.\+Spotify\+Model.\+requests = new \mbox{\hyperlink{classDashboard_1_1Pages_1_1Requests}{Requests}}(\mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_a497ba955664fa50dc327cb5f1dd5c4b6}{authentification}})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a0b01a389cf8fb4cee3dbdd7a794e2394}\label{classDashboard_1_1Pages_1_1SpotifyModel_a0b01a389cf8fb4cee3dbdd7a794e2394}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!settings@{settings}}
+\index{settings@{settings}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{settings}{settings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_1_1Settings}{Settings}} Dashboard.\+Pages.\+Spotify\+Model.\+settings = new \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_1_1Settings}{Settings}}()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a83c4f44607a683cd429ff1d3e0e1d8f6}\label{classDashboard_1_1Pages_1_1SpotifyModel_a83c4f44607a683cd429ff1d3e0e1d8f6}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!spotify\_token@{spotify\_token}}
+\index{spotify\_token@{spotify\_token}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{spotify\_token}{spotify\_token}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyToken_1_1Root}{Spotify\+Token.\+Root}} Dashboard.\+Pages.\+Spotify\+Model.\+spotify\+\_\+token = new \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyToken_1_1Root}{Spotify\+Token.\+Root}}()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_a867410a66b61df1f0150751b4312b4cd}\label{classDashboard_1_1Pages_1_1SpotifyModel_a867410a66b61df1f0150751b4312b4cd}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!spotify\_user@{spotify\_user}}
+\index{spotify\_user@{spotify\_user}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{spotify\_user}{spotify\_user}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyUser_1_1Root}{Spotify\+User.\+Root}} Dashboard.\+Pages.\+Spotify\+Model.\+spotify\+\_\+user = new \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyUser_1_1Root}{Spotify\+User.\+Root}}()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1SpotifyModel_ab53558ca2c34b8e8a88e2412655285d9}\label{classDashboard_1_1Pages_1_1SpotifyModel_ab53558ca2c34b8e8a88e2412655285d9}} 
+\index{Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}!user@{user}}
+\index{user@{user}!Dashboard.Pages.SpotifyModel@{Dashboard.Pages.SpotifyModel}}
+\doxysubsubsection{\texorpdfstring{user}{user}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_1_1SUser}{SUser}} Dashboard.\+Pages.\+Spotify\+Model.\+user = new \mbox{\hyperlink{classDashboard_1_1Pages_1_1SpotifyModel_1_1SUser}{SUser}}()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Dashboard/\+Pages/\+Modules/\mbox{\hyperlink{Spotify_8cshtml_8cs}{Spotify.\+cshtml.\+cs}}\end{DoxyCompactItemize}

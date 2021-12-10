@@ -1,0 +1,7 @@
+; ---------------
+; - example.avm -
+; ---------------
+
+push UNKNOWN(32)
+push int32(33)
+exit

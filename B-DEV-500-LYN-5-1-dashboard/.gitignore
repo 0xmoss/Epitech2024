@@ -1,0 +1,17 @@
+# BIN
+Dashboard/[b|B]in
+Dashboard/[O|o]bj
+
+# OBJ
+DashboardAPI/[b|B]in
+DashboardAPI/[O|o]bj
+
+DashboardDB/*
+
+# CACHE
+Dashboard/[c|C]ache
+
+# SETTINGS
+Dashboard/settings.json
+
+.vscode

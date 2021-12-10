@@ -1,0 +1,62 @@
+version: '3.1'
+services:
+    app:
+        build: ./Dashboard
+        container_name: app
+        command: dotnet watch run --urls http://0.0.0.0:8080
+        hostname: 0.0.0.0
+        restart: always
+        environment:
+            - 0.0.0.0
+        volumes:
+            - /root/.aspnet/DataProtection-Keys
+            - ./Dashboard:/app
+        networks:
+            - backend
+        ports:
+            - "8080:8080"
+        expose:
+            - "8080"
+        depends_on:
+            - api
+
+    api:
+        build: ./DashboardAPI
+        container_name: api
+        command: dotnet watch run --urls http://0.0.0.0:8081
+        hostname: 0.0.0.0
+        restart: always
+        environment:
+            - 0.0.0.0
+        volumes:
+            - /root/.aspnet/DataProtection-Keys
+            - ./DashboardAPI:/api
+        networks:
+            - backend
+        ports:
+            - "8081:8081"
+        expose:
+            - "8081"
+        depends_on:
+            - mongodb
+
+    mongodb:
+        image: mongo
+        container_name: mongodb
+        hostname: 0.0.0.0
+        volumes:
+            - "./DashboardDB:/docker-entrypoint-initdb.d/init.sql"
+        environment:
+            - 0.0.0.0
+        ports:
+            - "27017:27017"
+        expose:
+            - "27017"
+        restart: unless-stopped
+        networks:
+            - backend
+
+networks:
+    backend:
+        driver:
+            bridge

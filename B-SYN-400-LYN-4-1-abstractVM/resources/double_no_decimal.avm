@@ -1,0 +1,5 @@
+push double(89.65)
+push int32(20)
+mul
+dump
+exit

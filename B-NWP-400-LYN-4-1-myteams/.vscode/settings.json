@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "tools.h": "c",
+        "phaseout.h": "c",
+        "array": "c",
+        "string": "c",
+        "string_view": "c",
+        "system_error": "c",
+        "cli.h": "c",
+        "struct.h": "c"
+    }
+}

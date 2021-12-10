@@ -1,0 +1,31 @@
+﻿@page
+@model LoginModel
+@{
+    LoginModel login = new LoginModel();
+    LogoutModel logout = new LogoutModel();
+
+    //bool is_logged = await login.call_login();
+    bool is_logged = true;
+
+    ViewData["Title"] = "Login";
+
+    @if (is_logged == true)
+    {
+        <h1>User logged</h1>
+
+        <a href="@await logout.all()">
+            <button type="button">Logout</button>
+        </a>
+    } else {
+        <h1>User not logged</h1>
+        <p>
+            <h2>Username:</h2>
+            <input type="text" id="fname" name="fname">
+            <h2>Password:</h2>
+            <input type="text" id="fname" name="fname">
+        </p>
+        <a href="@await login.call_login()">
+            <button type="button">Login</button>
+        </a>
+    }
+}

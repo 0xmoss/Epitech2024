@@ -1,0 +1,15 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+
+    <p>
+        USER REGISTER
+    </p>
+
+    <h1 class="text-danger">Register</h1>
+
+}
+
+
+<input type="button" value="Register" onclick="window.location='@Url.Action("Action", "call_register")'"/>

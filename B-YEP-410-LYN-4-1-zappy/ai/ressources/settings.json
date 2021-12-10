@@ -1,0 +1,211 @@
+{
+    "debug" : false,
+    "passive" : false,
+    "commands" : [
+        {
+            "name" : "look around",
+            "command" : [
+                "Look",
+                "Right",
+                "Look",
+                "Right",
+                "Look",
+                "Right",
+                "Look",
+                "Right"
+            ]
+        },
+        {
+            "name" : "look",
+            "command" : [
+                "Look"
+            ]
+        },
+        {
+            "name" : "inventory",
+            "command" : [
+                "Inventory"
+            ]
+        },
+        {
+            "name" : "forward",
+            "command" : [
+                "Forward"
+            ]
+        },
+        {
+            "name" : "backward",
+            "command" : [
+                "Right",
+                "Right"
+            ]
+        },
+        {
+            "name" : "right",
+            "command" : [
+                "Right"
+            ]
+        },
+        {
+            "name" : "left",
+            "command" : [
+                "Left"
+            ]
+        },
+        {
+            "name" : "broadcast",
+            "command" : [
+                "Broadcast text"
+            ]
+        },
+        {
+            "name" : "connect",
+            "command" : [
+                "Connect_nbr"
+            ]
+        },
+        {
+            "name" : "fork",
+            "command" : [
+                "Fork"
+            ]
+        },
+        {
+            "name" : "eject",
+            "command" : [
+                "Eject"
+            ]
+        },
+        {
+            "name" : "take",
+            "command" : [
+                "Take object"
+            ]
+        },
+        {
+            "name" : "set",
+            "command" : [
+                "Set object"
+            ]
+        },
+        {
+            "name" : "incantation",
+            "command" : [
+                "Incantation"
+            ]
+        },
+        {
+            "name" : "take food",
+            "command" : [
+                "Take food"
+            ]
+        },
+        {
+            "name" : "take linemate",
+            "command" : [
+                "Take linemate"
+            ]
+        },
+        {
+            "name" : "take deraumere",
+            "command" : [
+                "Take deraumere"
+            ]
+        },
+        {
+            "name" : "take sibur",
+            "command" : [
+                "Take sibur"
+            ]
+        },
+        {
+            "name" : "take thystame",
+            "command" : [
+                "Take thystame"
+            ]
+        },
+        {
+            "name" : "take phiras",
+            "command" : [
+                "Take phiras"
+            ]
+        },
+        {
+            "name" : "take mendiane",
+            "command" : [
+                "Take mendiane"
+            ]
+        }
+    ],
+    "looking" : "forward",
+    "Look" : [],
+    "map" : {
+        "direction" : [
+            "forward",
+            "right",
+            "backward",
+            "left"
+        ],
+        "forward" : [],
+        "right" : [],
+        "backward" : [],
+        "left" : []
+    },
+    "elevation" : "HERE",
+    "food_limit" : 8,
+    "Inventory" : [],
+    "Right" : null,
+    "Left" : null,
+    "Forward" : null,
+    "Backward" : null,
+    "status" : {
+        "level" : 0,
+        "players" : [ 1, 2, 2, 4, 4, 6, 6 ],
+        "result" : null,
+        "message" : null,
+        "ressources" : [
+            {
+                "name" : "food",
+                "quantity" : 0,
+                "elevation" : [ 0, 0, 0, 0, 0, 0, 0 ]
+            },
+            {
+                "name" : "linemate",
+                "quantity": 0,
+                "elevation" : [ 1, 1, 2, 1, 1, 1, 2 ]
+            },
+            {
+                "name" : "deraumere",
+                "quantity" : 0,
+                "elevation" : [ 0, 1, 0, 1, 2, 2, 2 ]
+            },
+            {
+                "name" : "sibur",
+                "quantity" : 0,
+                "elevation" : [ 0, 1, 1, 2, 1, 3, 2 ]
+            },
+            {
+                "name" : "mendiane",
+                "quantity" : 0,
+                "elevation" : [ 0, 0, 0, 0, 3, 0, 2 ]
+            },
+            {
+                "name" : "phiras",
+                "quantity" : 0,
+                "elevation" : [ 0, 0, 2, 1, 0, 1, 2 ]
+            },
+            {
+                "name" : "thystame",
+                "quantity" : 0,
+                "elevation" : [ 0, 0, 0, 0, 0, 0, 1 ]
+            }
+        ]
+    },
+    "server" : {
+        "status" : {
+            "ok" : "ok",
+            "ko" : "ko"
+        }
+    },
+    "refresh": 5
+}

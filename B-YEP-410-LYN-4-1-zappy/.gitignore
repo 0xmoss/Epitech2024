@@ -1,0 +1,11 @@
+/zappy_server
+/zappy_ai
+/zappy_client
+/zappy_gui
+*.o
+vgcore.*
+*.gcno
+*.gcda
+*__pycache__
+*.DS_Store
+.DS_Store

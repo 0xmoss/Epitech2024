@@ -1,0 +1,7 @@
+; ---------------
+; - example.avm -
+; ---------------
+
+add int8(NOTREQUIRED)
+add
+exit

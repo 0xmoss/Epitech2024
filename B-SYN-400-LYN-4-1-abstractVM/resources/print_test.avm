@@ -1,0 +1,12 @@
+; ---------------
+; - example.avm -
+; ---------------
+
+push int16(87)
+push int8(56)
+print
+clear
+push int8(45)
+push int16(56)
+print
+exit

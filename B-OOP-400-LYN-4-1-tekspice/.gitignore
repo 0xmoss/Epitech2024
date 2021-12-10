@@ -1,0 +1,4 @@
+*.o
+nanotekspice
+#ressources
+.vscode

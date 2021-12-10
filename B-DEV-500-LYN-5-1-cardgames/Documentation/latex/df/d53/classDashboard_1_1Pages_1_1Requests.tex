@@ -1,0 +1,99 @@
+\hypertarget{classDashboard_1_1Pages_1_1Requests}{}\doxysection{Dashboard.\+Pages.\+Requests Class Reference}
+\label{classDashboard_1_1Pages_1_1Requests}\index{Dashboard.Pages.Requests@{Dashboard.Pages.Requests}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDashboard_1_1Pages_1_1Requests_a605a1e501de0e4f71b95483a08dce018}{Requests}} (\mbox{\hyperlink{classDashboard_1_1Pages_1_1Authentification}{Authentification}} auth\+\_\+data)
+\item 
+async Task$<$ Dictionary$<$ string, string $>$ $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1Requests_a56acda607c9e1bcb751ac0d076ec7d8d}{create}} (string url, string token, string body, string useragent)
+\item 
+async Task$<$ String $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1Requests_a024cf2fd61839f2ab06cb5e8d151975b}{post}} (Dictionary$<$ string, string $>$ informations)
+\item 
+async Task$<$ String $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1Requests_a1a9f72bc56cc722e7ec9a41e31c51faf}{get}} (Dictionary$<$ string, string $>$ informations)
+\item 
+async Task$<$ String $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1Requests_af80ba0ec290218f3e94120583d388097}{put}} (Dictionary$<$ string, string $>$ informations)
+\item 
+async Task$<$ String $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1Requests_a44b2ce07e64b045d1745aaa498314f9f}{patch}} (Dictionary$<$ string, string $>$ informations)
+\item 
+async Task$<$ String $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1Requests_a56975b1a53dc43b50e5a92404d3719b7}{delete}} (Dictionary$<$ string, string $>$ informations)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task \mbox{\hyperlink{classDashboard_1_1Pages_1_1Requests_a312808e9f524389b0bee9cb813be3d3b}{load\+\_\+cache}} (\mbox{\hyperlink{classDashboard_1_1Pages_1_1Authentification}{Authentification}} auth\+\_\+data)
+\item 
+async Task$<$ Task $>$ \mbox{\hyperlink{classDashboard_1_1Pages_1_1Requests_a9dfc11542dcf958daaf77923d6ce2a2f}{display}} (Dictionary$<$ string, string $>$ informations)
+\item 
+bool \mbox{\hyperlink{classDashboard_1_1Pages_1_1Requests_a27b7c9728fb6e8287981c88a9254859d}{valid}} (Dictionary$<$ string, string $>$ informations, string key)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1Requests_a605a1e501de0e4f71b95483a08dce018}\label{classDashboard_1_1Pages_1_1Requests_a605a1e501de0e4f71b95483a08dce018}} 
+\index{Dashboard.Pages.Requests@{Dashboard.Pages.Requests}!Requests@{Requests}}
+\index{Requests@{Requests}!Dashboard.Pages.Requests@{Dashboard.Pages.Requests}}
+\doxysubsubsection{\texorpdfstring{Requests()}{Requests()}}
+{\footnotesize\ttfamily Dashboard.\+Pages.\+Requests.\+Requests (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDashboard_1_1Pages_1_1Authentification}{Authentification}}}]{auth\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1Requests_a56acda607c9e1bcb751ac0d076ec7d8d}\label{classDashboard_1_1Pages_1_1Requests_a56acda607c9e1bcb751ac0d076ec7d8d}} 
+\index{Dashboard.Pages.Requests@{Dashboard.Pages.Requests}!create@{create}}
+\index{create@{create}!Dashboard.Pages.Requests@{Dashboard.Pages.Requests}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily async Task$<$ Dictionary$<$ string, string $>$ $>$ Dashboard.\+Pages.\+Requests.\+create (\begin{DoxyParamCaption}\item[{string}]{url,  }\item[{string}]{token,  }\item[{string}]{body,  }\item[{string}]{useragent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1Requests_a56975b1a53dc43b50e5a92404d3719b7}\label{classDashboard_1_1Pages_1_1Requests_a56975b1a53dc43b50e5a92404d3719b7}} 
+\index{Dashboard.Pages.Requests@{Dashboard.Pages.Requests}!delete@{delete}}
+\index{delete@{delete}!Dashboard.Pages.Requests@{Dashboard.Pages.Requests}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily async Task$<$ String $>$ Dashboard.\+Pages.\+Requests.\+delete (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{informations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1Requests_a9dfc11542dcf958daaf77923d6ce2a2f}\label{classDashboard_1_1Pages_1_1Requests_a9dfc11542dcf958daaf77923d6ce2a2f}} 
+\index{Dashboard.Pages.Requests@{Dashboard.Pages.Requests}!display@{display}}
+\index{display@{display}!Dashboard.Pages.Requests@{Dashboard.Pages.Requests}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily async Task$<$ Task $>$ Dashboard.\+Pages.\+Requests.\+display (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{informations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1Requests_a1a9f72bc56cc722e7ec9a41e31c51faf}\label{classDashboard_1_1Pages_1_1Requests_a1a9f72bc56cc722e7ec9a41e31c51faf}} 
+\index{Dashboard.Pages.Requests@{Dashboard.Pages.Requests}!get@{get}}
+\index{get@{get}!Dashboard.Pages.Requests@{Dashboard.Pages.Requests}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily async Task$<$ String $>$ Dashboard.\+Pages.\+Requests.\+get (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{informations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1Requests_a312808e9f524389b0bee9cb813be3d3b}\label{classDashboard_1_1Pages_1_1Requests_a312808e9f524389b0bee9cb813be3d3b}} 
+\index{Dashboard.Pages.Requests@{Dashboard.Pages.Requests}!load\_cache@{load\_cache}}
+\index{load\_cache@{load\_cache}!Dashboard.Pages.Requests@{Dashboard.Pages.Requests}}
+\doxysubsubsection{\texorpdfstring{load\_cache()}{load\_cache()}}
+{\footnotesize\ttfamily Task Dashboard.\+Pages.\+Requests.\+load\+\_\+cache (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDashboard_1_1Pages_1_1Authentification}{Authentification}}}]{auth\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1Requests_a44b2ce07e64b045d1745aaa498314f9f}\label{classDashboard_1_1Pages_1_1Requests_a44b2ce07e64b045d1745aaa498314f9f}} 
+\index{Dashboard.Pages.Requests@{Dashboard.Pages.Requests}!patch@{patch}}
+\index{patch@{patch}!Dashboard.Pages.Requests@{Dashboard.Pages.Requests}}
+\doxysubsubsection{\texorpdfstring{patch()}{patch()}}
+{\footnotesize\ttfamily async Task$<$ String $>$ Dashboard.\+Pages.\+Requests.\+patch (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{informations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1Requests_a024cf2fd61839f2ab06cb5e8d151975b}\label{classDashboard_1_1Pages_1_1Requests_a024cf2fd61839f2ab06cb5e8d151975b}} 
+\index{Dashboard.Pages.Requests@{Dashboard.Pages.Requests}!post@{post}}
+\index{post@{post}!Dashboard.Pages.Requests@{Dashboard.Pages.Requests}}
+\doxysubsubsection{\texorpdfstring{post()}{post()}}
+{\footnotesize\ttfamily async Task$<$ String $>$ Dashboard.\+Pages.\+Requests.\+post (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{informations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1Requests_af80ba0ec290218f3e94120583d388097}\label{classDashboard_1_1Pages_1_1Requests_af80ba0ec290218f3e94120583d388097}} 
+\index{Dashboard.Pages.Requests@{Dashboard.Pages.Requests}!put@{put}}
+\index{put@{put}!Dashboard.Pages.Requests@{Dashboard.Pages.Requests}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily async Task$<$ String $>$ Dashboard.\+Pages.\+Requests.\+put (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{informations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDashboard_1_1Pages_1_1Requests_a27b7c9728fb6e8287981c88a9254859d}\label{classDashboard_1_1Pages_1_1Requests_a27b7c9728fb6e8287981c88a9254859d}} 
+\index{Dashboard.Pages.Requests@{Dashboard.Pages.Requests}!valid@{valid}}
+\index{valid@{valid}!Dashboard.Pages.Requests@{Dashboard.Pages.Requests}}
+\doxysubsubsection{\texorpdfstring{valid()}{valid()}}
+{\footnotesize\ttfamily bool Dashboard.\+Pages.\+Requests.\+valid (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{informations,  }\item[{string}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Dashboard/\+API/\mbox{\hyperlink{requests_8cs}{requests.\+cs}}\end{DoxyCompactItemize}

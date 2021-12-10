@@ -1,0 +1,27 @@
+[compiler]
+    compiler = clang
+    cflags = -g3 -Weverything -Wno-gnu -march=native
+    ldflags = None
+
+[header]
+    path = include
+    type = hpp
+
+[source]
+    path = src
+    type = cpp
+    object = o
+
+[ressources]
+    path = ressources
+
+[binary]
+    name = plazza
+
+[settings]
+    output = Makefile
+    society = EPITECH PROJECT
+    year = 2021
+    project = Makfile generated with Yumiko
+    description = File description
+

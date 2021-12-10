@@ -1,0 +1,22 @@
+{
+  "client": {
+    "host": "localhost:8080"
+  },
+  "server": {
+    "current_time": 1636797853,
+    "services ": [
+      {
+        "name": "spotify",
+        "widgets": [
+          {
+            "name": "search",
+            "description": "search for artist and music in spotify",
+            "params": [
+              null
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

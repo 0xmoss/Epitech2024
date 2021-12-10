@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['referer_0',['referer',['../d2/deb/classDashboard_1_1Pages_1_1CoffeeSupporters_1_1Datum.html#a5a2291a5eb1a9cdb5ef3f081bab0b353',1,'Dashboard.Pages.CoffeeSupporters.Datum.referer()'],['../db/d95/classDashboard_1_1Pages_1_1CoffeeSubscriptions_1_1Datum.html#a133b35e215c89abf15f040e74b023a2c',1,'Dashboard.Pages.CoffeeSubscriptions.Datum.referer()']]],
+  ['refresh_5ftoken_1',['refresh_token',['../d7/d0e/classDashboard_1_1Pages_1_1SpotifyToken_1_1Root.html#af7f91c89a8971abebf3be1b4d1f8a29c',1,'Dashboard::Pages::SpotifyToken::Root']]],
+  ['region_2',['region',['../dc/d39/classDashboard_1_1Pages_1_1WeatherForecast_1_1Location.html#aa2a5faf2df8d52b8e38f30b4100c22c5',1,'Dashboard::Pages::WeatherForecast::Location']]],
+  ['release_5fdate_3',['release_date',['../dd/d3d/classDashboard_1_1Pages_1_1SpotifyTrack_1_1Album.html#a49954c70b5fee584d1dfb299657ffd7c',1,'Dashboard::Pages::SpotifyTrack::Album']]],
+  ['release_5fdate_5fprecision_4',['release_date_precision',['../dd/d3d/classDashboard_1_1Pages_1_1SpotifyTrack_1_1Album.html#a41d4b3924d51207b6621586b0ca6eb17',1,'Dashboard::Pages::SpotifyTrack::Album']]],
+  ['request_5',['request',['../d1/d9b/classDashboard_1_1Pages_1_1WeatherForecast_1_1Root.html#aaa50593d9d867d14a50f17f47efe8ac4',1,'Dashboard::Pages::WeatherForecast::Root']]],
+  ['requestid_6',['RequestId',['../de/db2/classDashboard_1_1Pages_1_1ErrorModel.html#a7a82f007ce5f709558900f9c2a4bc770',1,'Dashboard::Pages::ErrorModel']]],
+  ['reward_5fcoffee_5fprice_7',['reward_coffee_price',['../de/d4d/classDashboard_1_1Pages_1_1CoffeeExtras_1_1Extra.html#aad6fcfb68ca5d89883770e9b0d437335',1,'Dashboard::Pages::CoffeeExtras::Extra']]],
+  ['reward_5fconfirmation_5fmessage_8',['reward_confirmation_message',['../de/d4d/classDashboard_1_1Pages_1_1CoffeeExtras_1_1Extra.html#abf9db8d3213417aa238cdaa1ee32b556',1,'Dashboard::Pages::CoffeeExtras::Extra']]],
+  ['reward_5fcreated_5fon_9',['reward_created_on',['../de/d4d/classDashboard_1_1Pages_1_1CoffeeExtras_1_1Extra.html#a9a9b096b9a5a6905ef06a811747ebb09',1,'Dashboard::Pages::CoffeeExtras::Extra']]],
+  ['reward_5fdeleted_5fon_10',['reward_deleted_on',['../de/d4d/classDashboard_1_1Pages_1_1CoffeeExtras_1_1Extra.html#aac18add3698208e23c4f9ed62d5de4ed',1,'Dashboard::Pages::CoffeeExtras::Extra']]],
+  ['reward_5fdescription_11',['reward_description',['../de/d4d/classDashboard_1_1Pages_1_1CoffeeExtras_1_1Extra.html#a13d4324ca18e532800d9522707c0dcb5',1,'Dashboard::Pages::CoffeeExtras::Extra']]],
+  ['reward_5fid_12',['reward_id',['../de/d4d/classDashboard_1_1Pages_1_1CoffeeExtras_1_1Extra.html#a7b0863477766de9b3ebf665a50ad8ece',1,'Dashboard::Pages::CoffeeExtras::Extra']]],
+  ['reward_5fimage_13',['reward_image',['../de/d4d/classDashboard_1_1Pages_1_1CoffeeExtras_1_1Extra.html#a6f96ff06f9eb1350fda7dccf74cbc67d',1,'Dashboard::Pages::CoffeeExtras::Extra']]],
+  ['reward_5fis_5factive_14',['reward_is_active',['../de/d4d/classDashboard_1_1Pages_1_1CoffeeExtras_1_1Extra.html#a5c3e5a2150cf50c3d1b59e7bbf1b44aa',1,'Dashboard::Pages::CoffeeExtras::Extra']]],
+  ['reward_5forder_15',['reward_order',['../de/d4d/classDashboard_1_1Pages_1_1CoffeeExtras_1_1Extra.html#a81d52689fc1ba24c78bb5cafd33ca6e3',1,'Dashboard::Pages::CoffeeExtras::Extra']]],
+  ['reward_5fquestion_16',['reward_question',['../de/d4d/classDashboard_1_1Pages_1_1CoffeeExtras_1_1Extra.html#a95ef778aa48ceae835c6faaee7a95fea',1,'Dashboard::Pages::CoffeeExtras::Extra']]],
+  ['reward_5fslots_17',['reward_slots',['../de/d4d/classDashboard_1_1Pages_1_1CoffeeExtras_1_1Extra.html#a4449aa73427b03e1f1235565c4f7a394',1,'Dashboard::Pages::CoffeeExtras::Extra']]],
+  ['reward_5ftitle_18',['reward_title',['../de/d4d/classDashboard_1_1Pages_1_1CoffeeExtras_1_1Extra.html#a96d49d2e2cdf203ba30b6d577ff5995d',1,'Dashboard::Pages::CoffeeExtras::Extra']]],
+  ['reward_5fupdated_5fon_19',['reward_updated_on',['../de/d4d/classDashboard_1_1Pages_1_1CoffeeExtras_1_1Extra.html#ace6cdca6aa63349ac5f0c26bf24575e2',1,'Dashboard::Pages::CoffeeExtras::Extra']]],
+  ['reward_5fused_20',['reward_used',['../de/d4d/classDashboard_1_1Pages_1_1CoffeeExtras_1_1Extra.html#afd3eb2206d9d48c9a99bb65d285cfc80',1,'Dashboard::Pages::CoffeeExtras::Extra']]]
+];

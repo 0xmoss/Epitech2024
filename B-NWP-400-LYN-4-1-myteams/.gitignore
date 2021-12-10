@@ -1,0 +1,5 @@
+*.a
+*.o
+/myteams_*
+/manager_data.txt
+vgcore.*

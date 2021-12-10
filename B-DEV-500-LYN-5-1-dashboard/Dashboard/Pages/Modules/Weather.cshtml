@@ -1,0 +1,45 @@
+@page
+@model WeatherModel
+@{
+    WeatherModel weatherModel = new WeatherModel();
+    string city = "Lyon";
+
+    ViewData["Title"] = "Weather";
+
+    await weatherModel.key(null);
+    await weatherModel.city(city);
+    await weatherModel.start();
+
+    <div>
+        @await weatherModel.current_temperature()
+    </div>
+
+    <div>
+        @await weatherModel.current_wind_speed()
+    </div>
+
+    <div>
+        @await weatherModel.current_humidity()
+    </div>
+
+    <div>
+        @await weatherModel.location_name()
+    </div>
+
+    <div>
+        @await weatherModel.location_country()
+    </div>
+
+    <div>
+        @await weatherModel.location_region()
+    </div>
+
+    <div>
+        @await weatherModel.location_latitude()
+    </div>
+
+    <div>
+        @await weatherModel.location_longitude()
+    </div>
+   
+}

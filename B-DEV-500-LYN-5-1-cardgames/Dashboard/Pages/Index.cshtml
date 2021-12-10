@@ -1,0 +1,14 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>
+            Date: @DateTime.Now
+        </p>
+        <h1>Process name: @System.Diagnostics.Process.GetCurrentProcess().ProcessName</h1>
+    </div>
+}
+

@@ -1,0 +1,17 @@
+- SPLIT THE COMPONENT AND VALUE
+
+// PARSING
+
+- Set input values
+- Set output values
+
+// FUNCTIONS
+
+- simulate
+- display
+- edit value content
+
+// CHECK ALL VALUES
+- load->check_all(nanotekspice);
+
+// PIN MAP

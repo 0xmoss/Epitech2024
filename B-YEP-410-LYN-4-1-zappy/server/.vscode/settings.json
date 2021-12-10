@@ -1,0 +1,20 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "global.h": "c",
+        "stddef.h": "c",
+        "cstdlib": "c",
+        "stdlib.h": "c",
+        "struct.h": "c",
+        "signal.h": "c",
+        "signum.h": "c",
+        "sigset_t.h": "c",
+        "define.h": "c",
+        "socket.h": "c",
+        "errno.h": "c",
+        "type_traits": "c",
+        "extern.h": "c",
+        "prototypes.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}

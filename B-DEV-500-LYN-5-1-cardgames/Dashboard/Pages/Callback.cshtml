@@ -1,0 +1,12 @@
+@page
+@model CallbackModel
+@{
+    CallbackModel callback = new CallbackModel();
+
+    ViewData["Title"] = "Callback";
+
+    callback.uri = this.HttpContext.Request.QueryString.ToString();
+    @await callback.spotify_token();
+
+    this.HttpContext.Response.Redirect("/");
+}

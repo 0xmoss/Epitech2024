@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "phaseout.h": "c",
+        "build.h": "c",
+        "quit.h": "c"
+    }
+}

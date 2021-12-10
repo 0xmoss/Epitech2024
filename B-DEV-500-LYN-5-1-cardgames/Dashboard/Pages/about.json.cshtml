@@ -1,0 +1,21 @@
+@page
+@model AboutModel
+@{
+    AboutModel about_ = new AboutModel();
+
+    about_.host = HttpContext.Request.Host.ToString();
+    await about_.load();
+
+    ViewData["Title"] = "About";
+
+    //this.HttpContext.Response.Redirect("about_data.json");
+
+    <a href="./about_data.json">about.json</a>
+
+    <body>
+        <p>
+            <object width=100% height=100% type="text/plain" data="./about_data.txt" border="0">
+            </object>
+        </p>
+    </body>
+}

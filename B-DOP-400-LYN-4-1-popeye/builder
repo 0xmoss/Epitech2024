@@ -1,0 +1,58 @@
+#!/bin/bash
+
+printf "\e[1;31m Weclome into popeye by Neo\e[0;0m\n\n"
+
+app_1="poll"
+app_2="redis"
+app_3="result"
+
+build_image_1()
+{
+    printf "\e[1;33m BUILDING | : "poll"\e[0;0m\n"
+    sudo docker build poll
+    printf "\e[1;32m DONE     | : "poll"\e[0;0m\n"
+}
+
+build_image_2()
+{
+    printf "\e[1;33m BUILDING | : "redis"\e[0;0m\n"
+    sudo docker build result
+    printf "\e[1;32m DONE     | : "redis"\e[0;0m\n"
+}
+
+build_image_3()
+{
+    printf "\e[1;33m BUILDING | : "result"\e[0;0m\n"
+    sudo docker build worker
+    printf "\e[1;32m DONE     | : "result"\e[0;0m\n"
+}
+
+run_image_1()
+{
+    printf "\e[1;33m STARTING | : "poll"\e[0;0m\n"
+    sudo docker-compose up
+    flask run --host=0.0.0.0 --port=80
+    printf "\e[1;32m STARTED  | : "poll"\e[0;0m\n"
+}
+
+run_image_2()
+{
+    printf "\e[1;33m STARTING | : "redis"\e[0;0m\n" -d
+    node result/server.js
+    printf "\e[1;32m STARTED  | : "redis"\e[0;0m\n"
+}
+
+run_image_3()
+{
+    printf "\e[1;33m STARTING | : "result"\e[0;0m\n"
+    printf "\e[1;32m STARTED  | : "result"\e[0;0m\n"
+}
+
+build_image_1
+build_image_2
+build_image_3
+
+run_image_1
+run_image_2
+run_image_3
+    

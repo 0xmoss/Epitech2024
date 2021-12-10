@@ -1,0 +1,11 @@
+# BIN
+Dashboard/[b|B]in
+Dashboard/[O|o]bj
+
+# OBJ
+DashboardAPI/[b|B]in
+DashboardAPI/[O|o]bj
+
+DashboardDB/*
+
+.vscode

@@ -1,0 +1,732 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home  page";
+
+    <div class="row" data-masonry='{"percentPosition": true}'>
+        @if (Globals.CurrentUser != null)
+        {
+            @* Profile *@
+            <div class="draggable col-sm-6 col-lg-4 mb-4 ">
+                <div class="card text-dark shadow mb-3">
+                    <div class="card-header">Profile</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Welcome @Globals.CurrentUser.Username</h5>
+                        <p class="card-text">
+                            Username: @Globals.CurrentUser.Username <br />
+                            ID: @Globals.CurrentUser.Id
+                        </p>
+                        @if (Globals.CurrentWidgets.Any())
+                        {
+                            <p class="card-text">
+                                Current widgets:
+                            </p>
+                                <ul class="list-group">
+                                    @foreach (var item in Globals.CurrentWidgets)
+                                    {
+                                        <li class="list-group-item">
+                                            <div class="d-flex flex-row-reverse bd-highlight">
+                                                <div class="p-2 bd-highlight">
+                                                    <form method="post">
+                                                        <input class="d-none" asp-for="@item" name="selection"/>
+                                                        <button asp-page-handler="RemoveWidget" class="close" style="background-color:transparent"><i class="bi-x-lg text-secondary"></i></button>
+                                                    </form>
+                                                </div>
+                                                <div class="p-2 bd-highlight">
+                                                    <form method="post" data-ajax="true" data-ajax-method="post">
+                                                        <input class="d-none" asp-for="@item" name="selection"/>
+                                                        <button asp-page-handler="RefreshWidget" class="close" style="background-color:transparent"><i class="bi-arrow-repeat text-secondary"></i></button>
+                                                    </form>
+                                                </div>
+                                                @if (item == "Duck") {
+                                                    <div class="p-2 bd-highlight"><button class="close" style="background-color:transparent" data-toggle="modal" data-target="#settingsDuckModal"><i class="bi-sliders text-secondary"></i></button></div>
+                                                } else if (item =="Dog") {
+                                                    <div class="p-2 bd-highlight"><button class="close" style="background-color:transparent" data-toggle="modal" data-target="#settingsDogModal"><i class="bi-sliders text-secondary"></i></button></div>
+                                                } else if (item == "Meme") {
+                                                    <div class="p-2 bd-highlight"><button class="close" style="background-color:transparent" data-toggle="modal" data-target="#settingsMemeModal"><i class="bi-sliders text-secondary"></i></button></div>
+                                                } else if (item == "Cat") {
+                                                    <div class="p-2 bd-highlight"><button class="close" style="background-color:transparent" data-toggle="modal" data-target="#settingsCatModal"><i class="bi-sliders text-secondary"></i></button></div>
+                                                } else if (item == "Meow") {
+                                                    <div class="p-2 bd-highlight"><button class="close" style="background-color:transparent" data-toggle="modal" data-target="#settingsMeowModal"><i class="bi-sliders text-secondary"></i></button></div>
+                                                } else if (item == "Number") {
+                                                    <div class="p-2 bd-highlight"><button class="close" style="background-color:transparent" data-toggle="modal" data-target="#settingsNumberModal"><i class="bi-sliders text-secondary"></i></button></div>                                                    
+                                                } else if (item == "Quote") {
+                                                    <div class="p-2 bd-highlight"><button class="close" style="background-color:transparent" data-toggle="modal" data-target="#settingsQuoteModal"><i class="bi-sliders text-secondary"></i></button></div>                                                    
+                                                } else if (item == "Insult") {
+                                                    <div class="p-2 bd-highlight"><button class="close" style="background-color:transparent" data-toggle="modal" data-target="#settingsInsultModal"><i class="bi-sliders text-secondary"></i></button></div>                                                    
+                                                } else if (item == "Coffee") {
+                                                    <div class="p-2 bd-highlight"><button class="close" style="background-color:transparent" data-toggle="modal" data-target="#settingsCoffeeModal"><i class="bi-sliders text-secondary"></i></button></div>                                                    
+                                                }
+                                                <div class="p-2 flex-grow-1 bd-highlight">@item</div>
+                                            </div>
+                                        </li>
+                                    }
+                                </ul>
+                            <br/>
+                        }
+                        <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#widgetsModal">Add widget</button>
+                    </div>
+                    <div class="card-footer">
+                        <form asp-page-handler="Logout" method="post">
+                            <button class="btn btn-outline-danger btn-block">Logout</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            @if (GlobalModels.panelModel != null)
+            {
+                @* QUOTES *@
+                @foreach (Quote.Root item in GlobalModels.panelModel.content.quotes)
+                {
+                    <div id="div_refresh" class="draggable col-sm-6 col-lg-4 mb-4">
+                        <div class="card shadow p-3">
+                            <blockquote class="blockquote">
+                                <p>@item.quote</p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer mb-0 text-muted">
+                                " @item.character "
+                                <cite title="Source Title">@item.anime</cite>
+                            </figcaption>
+                        </div>
+                    </div>
+                }
+
+                @* INSULT *@
+                @foreach (Insult.Root item in GlobalModels.panelModel.content.insults)
+                {
+                    <div id="div_refresh" class="draggable col-sm-6 col-lg-4 mb-4">
+                        <div class="card shadow">
+                            <div class="card-header">Insult</div>
+                            <div class="card-body">
+                                <p class="card-test">
+                                    @item.insult
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                @* MEME *@
+                @foreach (Meme.Root item in GlobalModels.panelModel.content.memes)
+                {
+                    <div id="div_refresh" class="draggable col-sm-6 col-lg-4 mb-4">
+                        <div class="card shadow">
+                            <div class="card-header">Productive meme</div>
+                            @if (item != null)
+                            {
+                                <img src="@item.url" style="width: 100%; height: 350px;" class="card-img" alt="Meme">
+                            }
+                        </div>
+                    </div>
+                }
+            
+                @foreach (Duck.Root item in GlobalModels.panelModel.content.ducks)
+                {
+                    <div id="div_refresh" class="draggable col-sm-6 col-lg-4 mb-4">
+                        <div class="card shadow">
+                            <div class="card-header">Productive duck</div>
+                            @if (item != null)
+                            {
+                                <img id="targetReloadDuck" src="@item.url" class="card-img" style="width: 100%; height: 350px;" alt="Productive duck">
+                            }
+                        </div>
+                    </div>
+                }
+
+                @foreach (Dog.Root item in GlobalModels.panelModel.content.dogs)
+                {
+                    <div id="div_refresh" class="draggable col-sm-6 col-lg-4 mb-4">
+                        <div class="card shadow">
+                            <div class="card-header">Productive dog</div>
+                            @if (item.url.EndsWith(".mp4") == true)
+                            {
+                                <video src="@item.url" class="card-img" style="width: 100%; height: 350px;" alt="Productive dog"
+                        controls></video>
+                            }
+                            else
+                            {
+                                <img src="@item.url" class="card-img" style="width: 100%; height: 350px;" alt="Productive dog">
+                            }
+                        </div>
+                    </div>
+                }
+
+                @foreach (Meow.Root item in GlobalModels.panelModel.content.meows)
+                {
+                    <div id="div_refresh" class="draggable col-sm-6 col-lg-4 mb-4">
+                        <div class="card shadow">
+                            <div class="card-header">Interesting cat fact</div>
+                            @if (item != null)
+                            {
+                                <div class="card-body">
+                                    <p class="card-test">
+                                        @item.data[0]
+                                    </p>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+
+                @foreach (Number.Root item in GlobalModels.panelModel.content.numbers)
+                {
+                    <div id="div_refresh" class="draggable col-sm-6 col-lg-4 mb-4">
+                        <div class="card shadow">
+                            <div class="card-header">Number facts</div>
+                            @if (item != null)
+                            {
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">@item.number</li>
+                                    <li class="list-group-item">@item.trivia</li>
+                                    <li class="list-group-item">@item.date</li>
+                                    <li class="list-group-item">@item.year</li>
+                                </ul>
+                            }
+                        </div>
+                    </div>
+                }
+
+                @foreach (Cat.Root item in GlobalModels.panelModel.content.cats)
+                {
+                    <div id="div_refresh" class="draggable col-sm-6 col-lg-4 mb-4">
+                        <div class="card shadow">
+                            <div class="card-header">Productive cat</div>
+                            @if (item != null)
+                            {
+                                <img src="@item.url" class="card-img" style="width: 100%; height: 350px;" alt="Productive cat">
+                            }
+                        </div>
+                    </div>
+                }
+            }
+
+            @if (GlobalModels.coffeeModel != null)
+            {
+                <div id="div_refresh" class="draggable col-sm-6 col-lg-4 mb-4">
+                    <div class="card shadow">
+                        <div class="card-header">Buymeacoffee</div>
+                        <ul class="list-group list-group-flush">
+                            @if (await GlobalModels.coffeeModel.state_subscriptions() != false)
+                            {
+                                <li class="list-group-item">@await GlobalModels.coffeeModel.get_subscriptions()</li>
+                            } else
+                            {
+                                <li class="list-group-item">Subscriptions: 0</li>
+                            }
+                            @if (await GlobalModels.coffeeModel.state_supporters() != false)
+                            {
+                                <li class="list-group-item">@await GlobalModels.coffeeModel.get_supporters()</li>
+                            } else
+                            {
+                                <li class="list-group-item">Supporters: 0</li>
+                            }
+                            @if (await GlobalModels.coffeeModel.state_extras() != false)
+                            {
+                                <li class="list-group-item">@await GlobalModels.coffeeModel.get_extras().</li>
+                            } else
+                            {
+                                <li class="list-group-item">Extras: 0</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            }
+
+            @if (GlobalModels.weatherModel != null)
+            {
+                <div id="div_refresh" class="draggable col-sm-6 col-lg-4 mb-4">
+                    <div class="card shadow">
+                        <div class="card-header">Weather in @await GlobalModels.weatherModel.location_name(), @await GlobalModels.weatherModel.location_region(), @await GlobalModels.weatherModel.location_country()</div>
+                        <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Temperature: @await GlobalModels.weatherModel.current_temperature()°C</li>
+                        <li class="list-group-item">Wind speed: @await GlobalModels.weatherModel.current_wind_speed() Km/h</li>
+                        <li class="list-group-item">Humidity: @await GlobalModels.weatherModel.current_humidity()%</li>
+                        <li class="list-group-item">Position: @await GlobalModels.weatherModel.location_latitude() @await GlobalModels.weatherModel.location_longitude()</li>
+                        </ul>
+                    </div>
+                </div>
+            }
+
+            @if (GlobalModels.spotifyModel != null)
+            {
+                <div id="div_refresh" class="draggable col-sm-6 col-lg-4 mb-4">
+                    <div class="card shadow">
+                        @if (!await Model.SpotifyIsConnected())
+                        {
+                            <div class="card-header">Spotify</div>
+                            <div class="card-body">
+                                <p class="card-text">Connect to your spotify account in order to access this widget's content</p>
+                            </div>
+                            <div class="card-footer">
+                                <form asp-page-handler="SpotifyConnect" method="post">
+                                    <button class="btn btn-success btn-block">Connect to spotify</button>
+                                </form>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="card-header">Spotify (@await GlobalModels.spotifyModel.get_user_name())</div>
+                            <div class="card-body">
+                                @if (Globals.SpotifySearchResultsPlaylist != null) {
+                                    <p class="fw-bold">Your playlists</p>
+                                    for (int i = 0; i < Globals.SpotifySearchResultsPlaylist.items.Count; i++) {
+                                        <div class="row">
+                                            <div class="col">
+                                            @Globals.SpotifySearchResultsPlaylist.items[i].name - ID: @Globals.SpotifySearchResultsPlaylist.items[i].id
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                                @if (Globals.SpotifySearchResultsAlbum != null) {
+                                    <p class="fw-bold">Albums</p>
+                                    if (Globals.SpotifySearchResultsAlbum.Items.Count > 0) {
+                                        for (int i = 0; i < 5; i++) {
+                                            <div class="row">
+                                                <div class="col">
+                                                @Globals.SpotifySearchResultsAlbum.Items[i].Name - @Globals.SpotifySearchResultsAlbum.Items[i].ReleaseDate
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+                                }
+                                @if (Globals.SpotifySearchResultsTrack != null) {
+                                    <p class="fw-bold">Tracks</p>
+                                    for (int i = 0; i < 5; i++) {
+                                        if (@Globals.SpotifySearchResultsTrack.tracks.items[i].album.total_tracks > 1) {
+                                            <div class="row">
+                                                <div class="col">
+                                                @Globals.SpotifySearchResultsTrack.tracks.items[i].album.name - @Globals.SpotifySearchResultsTrack.tracks.items[i].album.total_tracks tracks
+                                                </div>
+                                            </div>
+                                        } else {
+                                            <div class="row">
+                                                <div class="col">
+                                                @Globals.SpotifySearchResultsTrack.tracks.items[i].album.name - single
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+                                }
+                                @if (Globals.SpotifySearchResultsArtist != null) {
+                                    <p class="fw-bold">Artists</p>
+                                    for (int i = 0; i < 5; i++) {
+                                        <div class="row">
+                                            <div class="col">
+                                            @Globals.SpotifySearchResultsArtist.artists.items[i].name - @Globals.SpotifySearchResultsArtist.artists.items[i].followers.total followers
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                                @if (Globals.SpotifySearchResultsTop != null) {
+                                    <p class="fw-bold">Top Tracks</p>
+                                    for (int i = 0; i < 5; i++) {
+                                        <div class="row">
+                                            <div class="col">
+                                            @Globals.SpotifySearchResultsTop[i].Name
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                                <p class="fw-bold">Your playlists</p>
+                                <br/><button type="submit" class="btn btn-outline-success btn-block" data-toggle="modal" data-target="#spotifySearchModal">Search</button>
+                            </div>
+                            <div class="card-footer">
+                                <form asp-page-handler="SpotifyLogout" method="post">
+                                    <button class="btn btn-outline-danger btn-block">Logout of spotify</button>
+                                </form>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            @* Presentation *@
+            <div class="col-sm-6 col-lg-4 mb-4 ">
+                <div class="card text-dark shadow mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Welcome to the productivity dashboard!</h5>
+                        <p class="card-text">
+                            The productivity dashboard is a fully featured C# application targeting developpers. <br /><br />
+                            You can find a spotify integration, productive memes, insults, citations and much, much more.
+                            <br /><br />
+                            Register now!
+                        </p>
+                        <a href="https://github.com/mystere1337" class="card-link">@@mystere1337</a> <br />
+                        <a href="https://github.com/Neotoxic-off" class="card-link">@@Neotoxic-off</a>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/about.json" class="card-link">About.json</a>
+                    </div>
+                </div>
+            </div>
+
+            @* LOGIN *@
+            <div class="col-sm-6 col-lg-4 mb-4 ">
+                <div class="card text-dark shadow mb-3">
+                    <div class="card-header">Login</div>
+                    <div class="card-body">
+                        <p class="text-muted">
+                            Login to your productivity dashboard account.
+                        </p>
+                        @if (Globals.LastRegisterError != null)
+                        {
+                            <p class="text-danger">@Globals.LastLoginError</p>
+                        }
+                        <form asp-page-handler="Login" method="post">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Username</span>
+                                <input type="text" name="username" class="form-control" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Password</span>
+                                <input type="password" name="password" class="form-control" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                            </div>
+                            <button class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            @* REGISTRATION *@
+            <div class="col-sm-6 col-lg-4 mb-4 ">
+                <div class="card text-dark shadow mb-3">
+                    <div class="card-header">Register</div>
+                    <div class="card-body">
+                        <p class="text-muted">
+                            Register an account on the productivity dashboard.
+                        </p>
+                        @if (Globals.LastRegisterError != null)
+                        {
+                            <p class="text-danger">@Globals.LastRegisterError</p>
+                        }
+                        <form asp-page-handler="Register" method="post">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Username</span>
+                                <input type="text" name="username" class="form-control" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Password</span>
+                                <input type="password" name="password" class="form-control" aria-label="Password"
+                                aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Confirm Password</span>
+                                <input type="password" name="confirm" class="form-control" aria-label="Confirm password"
+                                aria-describedby="basic-addon1">
+                            </div>
+                            <button class="btn btn-primary">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            @* Dummy cards *@
+            <div class="col-sm-6 col-lg-4 mb-4" style="filter: blur(5px);">
+                <div class="card text-dark shadow mb-3">
+                    <div class="card-header">Lorem ipsum</div>
+                    <div class="card-body">
+                        <h5 class="user-select-none">Title</h5>
+                        <p class="user-select-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+                            Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum
+                            ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor,
+                            orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper.
+                            Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus
+                            volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede.
+                            Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum
+                            primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed
+                            pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 mb-4" style="filter: blur(5px);">
+                <div class="card text-dark shadow mb-3">
+                    <div class="card-header">Lorem secondos</div>
+                    <div class="card-body">
+                        <h5 class="user-select-none">long title</h5>
+                        <p class="user-select-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+                            Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum
+                            ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor,
+                            orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper.
+                            Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus
+                            volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede.
+                            Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum
+                            primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed
+                            pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 mb-4" style="filter: blur(5px);">
+                <div class="card text-dark shadow mb-3">
+                    <div class="card-header">Lorem</div>
+                    <div class="card-body">
+                        <h5 class="user-select-none">Random text</h5>
+                        <p class="user-select-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+                            Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum
+                            ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor,
+                            orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper.
+                            Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus
+                            volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede.
+                            Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum
+                            primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed
+                            pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    @* Modals *@
+    <div class="modal fade" id="widgetsModal" tabindex="-1" role="dialog" aria-labelledby="widgetsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form asp-page-handler="AddWidget" method="post">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Select widgets</h5>
+                    </div>
+                    <div class="modal-body">
+                        @foreach (var item in Model.Widgets)
+                        {
+                            @Html.RadioButtonFor(Model => Model.WidgetName, item) @item <br/>
+                        }
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary">Add Widget</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="spotifySearchModal" tabindex="-1" role="dialog" aria-labelledby="spotifySearchModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form asp-page-handler="SpotifySearch" method="post" data-ajax="true" data-ajax-method="post">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <input type="text" name="search" class="form-control" id="search" placeholder="Search" />
+                        <br/><button type="submit" class="btn btn-outline-success btn-block">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="settingsDuckModal" tabindex="-1" role="dialog" aria-labelledby="settingsDuckModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form asp-page-handler="SetDuckSettings" method="post">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Duck</h5>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" name="reloadRate" placeholder="Set reload rate">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary">Apply</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="settingsDogModal" tabindex="-1" role="dialog" aria-labelledby="settingsDogModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form asp-page-handler="SetDogSettings" method="post">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Dog</h5>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" name="reloadRate" placeholder="Set reload rate">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary">Apply</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="settingsMemeModal" tabindex="-1" role="dialog" aria-labelledby="settingsMemeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form asp-page-handler="SetMemeSettings" method="post">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Meme</h5>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" name="reloadRate" placeholder="Set reload rate">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary">Apply</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="settingsCatModal" tabindex="-1" role="dialog" aria-labelledby="settingsCatModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form asp-page-handler="SetCatSettings" method="post">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Cat</h5>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" name="reloadRate" placeholder="Set reload rate">
+                        <br/>
+                        <input type="text" class="form-control" name="key" placeholder="Set API key">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary">Apply</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="settingsMeowModal" tabindex="-1" role="dialog" aria-labelledby="settingsMeowModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form asp-page-handler="SetMeowSettings" method="post">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Meow</h5>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" name="reloadRate" placeholder="Set reload rate">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary">Apply</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="settingsNumberModal" tabindex="-1" role="dialog" aria-labelledby="settingsNumberModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form asp-page-handler="SetNumberSettings" method="post">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Number</h5>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" name="reloadRate" placeholder="Set reload rate">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary">Apply</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="settingsQuoteModal" tabindex="-1" role="dialog" aria-labelledby="settingsQuoteModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form asp-page-handler="SetQuoteSettings" method="post">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Quote</h5>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" name="reloadRate" placeholder="Set reload rate">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary">Apply</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="settingsInsultModal" tabindex="-1" role="dialog" aria-labelledby="settingsInsultModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form asp-page-handler="SetInsultSettings" method="post">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Insult</h5>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" name="reloadRate" placeholder="Set reload rate">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary">Apply</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="settingsCoffeeModal" tabindex="-1" role="dialog" aria-labelledby="settingsCoffeeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form asp-page-handler="SetCoffeeSettings" method="post">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Coffee</h5>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" name="reloadRate" placeholder="Set reload rate">
+                        <br/>
+                        <input type="text" class="form-control" name="key" placeholder="Set API key">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary">Apply</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+}
+@section scripts {
+    <script>        
+        var draggableElements = document.getElementsByClassName("draggable");
+
+        for(var i = 0; i < draggableElements.length; i++){
+            dragElement(draggableElements[i]);
+        }
+
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            elmnt.onmousedown = dragMouseDown;
+            function dragMouseDown(e) {
+                e = e || window.event;
+                pos3 = parseInt(e.clientX);
+                pos4 = parseInt(e.clientY);
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+                return false;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                pos1 = pos3 - parseInt(e.clientX);
+                pos2 = pos4 - parseInt(e.clientY);
+                pos3 = parseInt(e.clientX);
+                pos4 = parseInt(e.clientY);
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                console.log(elmnt.offsetTop)
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        $("#reloadDuck").click(function () {
+            $("#targetReloadDuck").load(location.href + " #targetReloadDuck");
+        });
+    </script>
+}

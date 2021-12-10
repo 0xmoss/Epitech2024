@@ -1,0 +1,49 @@
+{
+    "debug" : false,
+    "address" : {
+        "address" : [],
+        "city" : {
+            "choices" : []
+        },
+        "street_name" : {
+            "choices" : []
+        },
+        "street_type" : {
+            "choices" : [],
+            "types" : [
+                "allée",
+                "avenue",
+                "boulevard",
+                "chemin",
+                "impasse",
+                "place",
+                "quai",
+                "rue",
+                "square"
+            ]
+        },
+        "number" : {
+            "choices" : []
+        },
+        "choices" : []
+    },
+    "dictionnary" : {
+        "city" : null,
+        "number" : null,
+        "street_type" : null,
+        "street_name" : null
+    },
+    "prediction" : {
+        "city" : [],
+        "street_name" : [],
+        "address" : [],
+        "truncated" : [],
+        "sort" : []
+    },
+    "help" : [
+        "USAGE",
+        "\t./autoCompletion dictionary\n",
+        "DESCRIPTION",
+        "\tdictionary    file containing one address per line, as knowledge base"
+    ]
+}

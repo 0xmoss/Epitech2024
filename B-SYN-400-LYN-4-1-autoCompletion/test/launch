@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+ESCAPE="\033"
+RED="$ESCAPE[0;31m"
+GREEN="$ESCAPE[0;32m"
+CYAN="$ESCAPE[0;34m"
+RESET="$ESCAPE[0;0m"
+name="autoCompletion"
+
+function binary()
+{
+    if [[ ! -f $name ]]; then
+        printf "$RED[  KO  ] binary not found$RESET\n"
+        exit
+    else
+        printf "$GREEN[  OK  ] binary found$RESET\n"
+    fi
+}
+
+function run()
+{
+    examples=$(find test/example*.dict)
+    errors=$(find test/error*.dict)
+    inputs=$(find test/input*.dict)
+    binary
+
+    for data in $examples
+    do
+        for input in $inputs
+        do
+            printf "$CYAN[ .... ] running $data input: $input$RESET\n"
+            ./$name $data 2>/dev/null < $input
+        done
+    done
+
+    for data in $errors
+    do
+        printf "$CYAN[ .... ] running $data$RESET\n"
+        echo x | ./$name $data 1>/dev/null
+    done
+}
+
+run

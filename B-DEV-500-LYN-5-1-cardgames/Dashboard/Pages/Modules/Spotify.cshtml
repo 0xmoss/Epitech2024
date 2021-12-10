@@ -1,0 +1,25 @@
+﻿@page
+@model SpotifyModel
+@{
+    SpotifyModel spotify = new SpotifyModel();
+
+    //bool status = await spotify.is_logged();
+    bool status = false;
+
+    ViewData["Title"] = "Spotify";
+
+    @if (status == true) {
+        <h1 class="text-danger">You are logged</h1>
+
+    } else {
+        <h1 class="text-danger">You are not logged</h1>
+
+        <a href="@await spotify.call_login()">
+            <button type="login">Login</button>
+        </a>
+
+        <a href='@await spotify.search("lil+peep")'>
+            <button type="search">Search</button>
+        </a>
+    }
+}

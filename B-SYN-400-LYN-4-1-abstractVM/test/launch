@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+ESCAPE="\033"
+RED="$ESCAPE[0;31m"
+GREEN="$ESCAPE[0;32m"
+CYAN="$ESCAPE[0;34m"
+RESET="$ESCAPE[0;0m"
+name="abstractVM"
+
+function check_binary()
+{
+    if [[ ! -f $name ]]; then
+        printf "$RED[  KO  ]  binary not found $RESET\n"
+        exit
+    else
+        printf "$GREEN[  OK  ]  binary found $RESET\n"
+    fi
+}
+
+function run()
+{
+    tests=$(find resources/*.avm)
+    check_binary
+
+    for data in $tests
+    do
+        printf "$CYAN[  ....  ] Launching '$data'$RESET\n"
+        ./$name $data
+        printf "\n"
+    done
+}
+
+run

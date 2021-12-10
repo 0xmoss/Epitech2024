@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "tasks": [{
+        "label": "compile_client",
+        "command": "make",
+        "args": ["client"],
+        "type": "shell"
+    }, {
+        "label": "compile_server",
+        "command": "make",
+        "args": ["server"],
+        "type": "shell"
+    }]
+}

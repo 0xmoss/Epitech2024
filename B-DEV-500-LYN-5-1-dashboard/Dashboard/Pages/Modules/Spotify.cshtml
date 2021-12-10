@@ -1,0 +1,39 @@
+﻿@page
+@model SpotifyModel
+@{
+    SpotifyModel spotify = new SpotifyModel();
+
+    bool status = await spotify.is_logged();
+
+    ViewData["Title"] = "Spotify";
+
+    @if (status == true) {
+        <h1 class="text-danger">You are logged</h1>
+
+    } else {
+        <h1 class="text-danger">You are not logged</h1>
+
+        @* <a href="@await spotify.call_login()">Login to spotify
+        </a> *@
+
+        <a href='@await spotify.search_artist("lil peep")'>
+            <button type="search">Search</button>
+        </a>
+
+        <a href='@await spotify.search_track("Desacorde")'>
+            <button type="search">Search</button>
+        </a>
+
+        <a href='@await spotify.search_album("vald")'>
+            <button type="search">Album</button>
+        </a>
+
+        <a href='@await spotify.search_playlist()'>
+            <button type="search">Playlists</button>
+        </a>
+
+        <a href='@await spotify.search_top("vald")'>
+            <button type="search">Top</button>
+        </a>
+    }
+}

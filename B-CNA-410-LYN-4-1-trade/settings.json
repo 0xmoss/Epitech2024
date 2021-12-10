@@ -1,0 +1,93 @@
+{
+    "settings" : {
+        "player_name" : null,
+        "bot_name" : null,
+        "bank" : 0
+    },
+    "stacks" : {},
+    "candles" : {},
+    "tpermove" : 0,
+    "cinterval" : 0,
+    "cformat" : null,
+    "ctotal" : 0,
+    "cgiven" : 0,
+    "initstack" : 0,
+    "fees" : 0.0,
+    "initstack" : 0,
+    "status" : {
+        "buy" : "BUY",
+        "sell" : "SELL",
+        "pass" : "__EMPTY__"
+    },
+    "default" : {
+        "stacks" : {
+            "USDT" : 0.0,
+            "ETH" : 0.0,
+            "BTC" : 0.0
+        },
+        "candles" : {
+            "USDT" : "a,0,0,0,0,0,0",
+            "ETH"  : "b,0,0,0,0,0,0",
+            "BTC"  : "c,0,0,0,0,0,0"
+        }
+    },
+    "BTC_ETH" : [
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__"
+    ],
+    "USDT_ETH" : [
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__"
+    ],
+    "USDT_BTC" : [
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__",
+        "__EMPTY__"
+    ],
+    "commands" : {
+        "settings" : "settings",
+        "stacks" : "update game stacks",
+        "next_candles" : "update game next_candles",
+        "action" : "action order",
+        "end" : "end",
+        "arguments" : {
+            "names" : {
+                "player" : "player_names",
+                "bot" : "your_bot"
+            },
+            "bank" : "timebank",
+            "time" : "time_per_move",
+            "candle": {
+                "interval" : "candle_interval",
+                "format" : "candle_format",
+                "total" : "candle_total",
+                "given" : "candles_given"
+            },
+            "initial" : "initial_stack",
+            "percent" : "transaction_fee_percent"
+        }
+    }
+}
